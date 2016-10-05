@@ -1,16 +1,16 @@
+*{padding:0;margin:0}ul,li{list-style: none}
 body{
-	padding: 0;
-	margin: 0;
 	height: 100vh;
 	font-size: 10px;
-	background: url('../img/back.jpg') no-repeat center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	width: 100%;
+	overflow: hidden;
 }
 
-h1{
-	color:white;
-	font-size: 5rem;
-	letter-spacing: 0.3rem;
+.slider{
+}
+.slider li{
+	height: 100vh;
+	box-sizing: border-box;
+	border: 1px solid black;
+	float:left;
 }
