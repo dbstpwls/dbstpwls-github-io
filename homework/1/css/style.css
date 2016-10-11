@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background: url(../img/back.jpg) no-repeat center;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:10px;
+}
+
+h1{
+	font-size: 6vw;
+	display: none;
+}
+
+#timer{
+	position: absolute;
+	top:30vh;
+	width: 65vw;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 7em;
+	color:white;
+}
+
+.clock{
+	width: 20vh;
+	height:20vh;
+	position: absolute;
+	top:5vh;
+	background: white;
+	border-radius: 15%;
+}
+.clock>img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.wrap-bar{
+	width: 70vw;
+	height: 80px;
+	border-radius:30px;
+	background: white;
+	overflow: hidden;
+}
+.bar{
+	height: 100%;
+	float:left;
+	background: black;
+}

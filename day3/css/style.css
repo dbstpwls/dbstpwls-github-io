@@ -1,0 +1,40 @@
+@import url(http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+/*브라우저져 초기화*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+}
+/*브라우져 초기화*/
+
+body{
+	background: url(../img/leading-24.png);
+	width: 960px;
+	margin: 0 auto;
+	margin-top:18em;
+}
+
+div{
+	column-count: 4;
+	column-gap: 24px;
+}
+
+p{
+	line-height:1.5;
+	color:#454545;
+	margin-bottom:1.5em;
+	letter-spacing: 0.04em;
+}
+p::first-letter{
+	color:red;
+}
+p::last-child{
+	margin-bottom:0;
+}
