@@ -3,7 +3,7 @@
 	margin: 0;
 }
 body{
-	background: url(../img/back.jpeg) no-repeat center;
+	background: url(../img/back.jpg) no-repeat center;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
