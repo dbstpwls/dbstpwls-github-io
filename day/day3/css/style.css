@@ -46,7 +46,7 @@ p::last-child{
 /* h 태그 */
 
 h1,h2,h3,h4,h5,h6{
-	margin-top:3rem;
+	margin-top:1.5rem;
 	background: red
 }
 h6,h5{
