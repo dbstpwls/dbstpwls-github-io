@@ -18,9 +18,14 @@ body{
 	background: url(../img/leading-24.png);
 	width: 960px;
 	margin: 0 auto;
+	padding-bottom: 3rem;
 }
 
 div{
+	margin-top: 3em;
+}
+
+.column{
 	column-count: 4;
 	column-gap: 24px;
 }
@@ -36,4 +41,41 @@ p::first-letter{
 }
 p::last-child{
 	margin-bottom:0;
+}
+
+/* h 태그 */
+
+h1,h2,h3,h4,h5,h6{
+	margin-top:3rem;
+	background: red
+}
+h6,h5{
+	line-height: 1.5rem;
+}
+h4,h3,h2{
+	line-height: 3rem;
+	font-weight:normal;
+}
+h1{
+	line-height: 4.5rem;
+	font-weight:normal;
+}
+
+h6{
+	font-size:1em;
+}
+h5{
+	font-size:1.25em;
+}
+h4{
+	font-size:1.563em;
+}
+h3{
+	font-size:1.953em;
+}
+h2{
+	font-size:2.441em;
+}
+h1{
+	font-size:3.051em;
 }
