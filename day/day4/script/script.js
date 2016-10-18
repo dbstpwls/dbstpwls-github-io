@@ -16,6 +16,11 @@ $(document).ready(function(){
 	for( var key in color){
 		$addDiv.append('<div style="background:'+color[key]+'">'+color[key]+'</div>');
 	}
+
+	alert(window.clipboardData.getData('text'));
+
+
+
 });
 
 function pow(bePow, n) {

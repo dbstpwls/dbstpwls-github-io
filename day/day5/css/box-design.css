@@ -1,0 +1,12 @@
+*{padding:0px;margin:0px}li{list-style:none}
+
+img{
+	padding: 10px;
+	background : black;
+	border: 5px solid red;
+	margin:20px;
+}
+
+.tumb-wrap{
+	background:blue;
+}

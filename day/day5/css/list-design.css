@@ -1,0 +1,34 @@
+body{
+	margin-left:10rem;
+	margin-top: 10rem;
+}
+
+.note-list{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.note-list ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.note-list li{
+	background: url(../img/list_style_img.png) no-repeat;
+	background-position:  6px 1px;
+	padding-left:20px;
+}
+
+.color-numbering{
+	padding-left:1rem;
+	color: red;
+}
+.color-numbering span{
+	color:black;
+}
+
+.color-numbering ol{
+	color: blue;
+}
