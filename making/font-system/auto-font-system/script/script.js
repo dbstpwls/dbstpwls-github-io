@@ -147,5 +147,16 @@ function insert(name, fontSize) {
 }
 
 function lineHeightNum(fontRem) {
-	return Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight;				//부동 소수점 연산 오류가 발생
+	var fontPx = fontRem*rootFontSize;
+	var linePx = Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight*rootFontSize;
+	var divide = (linePx - fontPx)/baseLine;
+
+	console.log(fontPx, linePx,divide);
+
+	if(divide > 0.75){
+		divide = Math.round(divide);
+		return Math.ceil(fontRem*rootFontSize/baseLine-divide)*lineHeight;
+	}else{
+		return Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight;
+	}
 }
