@@ -1,0 +1,30 @@
+*{padding:0;margin:0}li{list-style:none}
+
+body{
+	width: 960px;
+	margin: 0 auto;
+}
+main{
+	margin-bottom:120px;
+}
+main:after{
+	display: block;
+	content: " ";
+	clear: both;
+}
+main img{
+	float:left;
+}
+
+div{
+	width: 100px;
+	height: 100px;
+	background: red;
+	float:left;
+}
+span{
+	display: inline-block;
+	width: 100px;
+	line-height: 50px;
+	background: red;
+}

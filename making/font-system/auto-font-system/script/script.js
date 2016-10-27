@@ -85,11 +85,11 @@ function initHtml($this) {
 
 
 function initCss($this) {
-	var resultCss = '<p>html {\n</p><p class="indent">\tfont-size :'+rootFontSize+'rem\n</p><p>}</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'rem\n</p><p class="indent">\tline-height :'+lineHeight+'rem\n</p><p>}</p>';
+	var resultCss = '<p>html {\n</p><p class="indent">\tfont-size :'+rootFontSize+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'rem;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
 	for(var key in outPutHSize){
 		outPutHSize[key];
 		outPutHLineHeight[key];
-		resultCss +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem</p><p>\n}</p>'
+		resultCss +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>'
 	}
 
 	$this.html(resultCss);
