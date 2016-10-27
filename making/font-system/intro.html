@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="auto-font-system/script/jquery-1.11.3.min.js"></script>
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="test.css">
+</head>
+<body>
+	<h1 class="first">!!!함수의 모듈화가 되지 않은 공식 설명하기 위한 페이지  입니다!!!</h1>
+	<p>
+		scss 파일에서 변수값만 바꾸면 아래 h태그의 비율 및 baseline이 바뀝니다.
+	</p>
+	<p>
+		$root-font-size를 바꿔도 비율에 맞춘 rem값을 지정해 줬기 때문에 크기가 변하지 않습니다.
+	</p>
+	<div>
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<span>span</span>
+	</div>
+	<p>
+		-설명-<br>
+		1. font-size : H태그의 font-size값은 결국 배율의 제곱이므로 제곱함수를 만들어 적용 (비율 맞추기 위해 $body-fontsize 곱함)<br>
+		2. base-line : 결국 line-height로 한줄 줄바꿈 한다는 것은 base-line을 기준으로 한 1줄이기 떄문에 $base-line 변수를 만들어 <span>(공식 1)</span>적용<br>
+		3. 글자의 크기에 따른 상대적 line-height : 글자의 상대적 크기/$base-line <span>(16/$root-font-size * 적용할 font의 rem 값)* $line-height</span> 으로 몇줄을 차지할 건지 계산
+	</p>
+	<p>- 문제점 -<br>
+		rem값으로 할경우 1.333333...... 등의 나누어 떨어지지 않는 경우가 번번히 발생해,
+		위와같이 +-1px 정도의 오차범위가 발생하더라고요<br>
+		그래서 rem값을 px값으로 변경한 뒤에 line-height를 계산하는 함수를 만들어 line-height 값을 px(고정값) 으로 적용해봤습니다.
+	</p>
+	<p>- 설명 3 변경 -
+		ceil(16/$root-font-size * 적용할 font의 rem 값)* $line-height
+	</p>
+	<p>
+		(공식 1) : $base-line/$root-font-size  =>  이 값이 1 line-height (1줄) <span>사용 : 2줄 바꿈 = > 2*($base-line/$root-font-size)</span><br>
+		(공식 2) : (16/$root-font-size * 적용할 font의 rem 값)/$base-line
+	</p>
+	<a href="auto-font-system/test.html">script를 통한 모듈화.</a>
+</body>
+</html>

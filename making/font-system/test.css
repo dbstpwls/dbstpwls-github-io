@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style: none; }
+
+html {
+  font-size: 10px; }
+
+body {
+  background: url("img/leading-24.png");
+  font-size: 1.6rem;
+  margin: 20px;
+  line-height: 2.4rem;
+}
+
+h6 {
+  font-size: 2rem;
+  line-height: 24px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+h5 {
+  font-size: 2.5rem;
+  line-height: 48px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+h4 {
+  font-size: 3.125rem;
+  line-height: 48px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+h3 {
+  font-size: 3.90625rem;
+  line-height: 48px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+h2 {
+  font-size: 4.88281rem;
+  line-height: 72px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+h1 {
+  font-size: 6.10352rem;
+  line-height: 72px;
+  margin-top: 2.4rem;
+  background: red;
+  opacity: 0.5; }
+
+p {
+  font-size: 1.6rem;
+  line-height: 24px;
+  margin-top: 2.4rem;
+  background: blue;
+  color: white;
+  opacity: 0.5; }
+
+span {
+  background: black; }
+
+ul > li {
+  line-height: 24px; }
+
+.first {
+  background: blue;
+  color: white; }

@@ -1,0 +1,105 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size:10px;
+}
+ul {
+	font-size: 16px;
+	line-height: 24px;
+	list-style: none;
+}
+.hide{
+	display:none;
+}
+.how-about{
+	display: block;
+	text-align: center;
+	font-size:16px;
+	line-height: 250px;
+	color:gray;
+}
+.other{
+	height: 250px;
+}
+.other p{
+	line-height:125px;
+}
+.default p, .other p{
+	text-align: center;
+}
+section{
+	margin-top:24px;
+	margin-left:20px;
+	margin-right:20px;
+}
+section p{
+	color:gray;
+	font-size:16px;
+	line-height: 24px;
+}
+section ul {
+	width: 400px;
+	border:3px solid #e0e0e0;
+	box-sizing: border-box;
+	float:left;
+	margin-right:20px;
+}
+
+section ul>li {
+	color:gray;
+	margin:21px;
+	margin-bottom:23px;
+}
+section ul label {
+	display:block;
+	width: 100%;
+}
+section ul input {
+	border : 2px solid #adadad;
+	box-sizing: border-box;
+	width: 80px;
+	height: 25px;
+	font-size:15px;
+	text-align: center;
+}
+
+button{
+	font-size:16px;
+	width:150px;
+	height: 48px;
+	border:none;
+	background: #ff9999;
+	border-radius:10px;
+	margin-top:72px;
+	margin-bottom:96px;
+	transition: all 0.2s;
+}
+button:hover, button:focus{
+	background: #ff5555;
+}
+section::after{
+	content:" ";
+	display: block;
+	clear:both;
+}
+
+.result-pannel>div{
+	width: 100%;
+	margin-top: 48px;
+	margin-bottom:48px;
+}
+#result-html{
+}
+
+.add{
+	font-size: 48px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	color:#ff5555;
+}
+.indent{
+	text-indent: 30px;
+}

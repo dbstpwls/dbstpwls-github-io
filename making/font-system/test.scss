@@ -1,0 +1,82 @@
+// //초기화
+// 	*{
+// 		padding:0;margin:0}
+// 	li{
+// 		list-style:none}
+// //초기화 end
+
+
+// $root-fontsize : 10;										// html font-size
+// $body-fontsize : 16/$root-fontsize;						// root의 font-size에 맞춰 font-size 기본값인16px를 rem으로 계산
+$base-line : 24;											// grid img 파일 background에 주기 및 줄바꿈을 위해 값 지정 (24px가 1줄)
+// $h-ratio : 1.25;												// h태그의 커지는 비율 설정
+// $line-height : $base-line/$root-fontsize;					// 1줄 rem이 몇인지 grid에 맞춰 계산
+// $h-font-control : 0;											// for 문에 h6부터 순차적으로 값이 커지는걸 제어하기 위한 변수
+
+// html{
+// 	font-size: $root-fontsize+px;
+// }
+body{
+	background: url('../img/leading-'+$base-line+'.png')};		// $base-line 변수가 바뀜에 따라 그리드 시스템 및 줄간격이 유동적으로 바뀜
+// 	font-size: $body-fontsize+rem;
+
+// 	//보기좋게
+// 	margin: 20px;
+// }
+
+// // 제곱 함수       ex) pow(3, 3)    ==>      3의 3승안 27이 나옴
+// @function pow($num, $pow) {
+// 	$return-num : $num;
+// 	@for $n from 1 to $pow {
+// 		$return-num : $return-num * $num;
+// 	}
+// 	@return  $return-num;
+// }
+
+// @function line-height-num($fontrem) {
+// 	$line-num : ceil($fontrem*$root-fontsize/$base-line);
+// 	@return $line-num*$line-height;
+// }
+
+// // 위 pow함수를 통한 h태그를 h6부터 1.25배 한것을 순차적으로 적용
+// @for $htag from 6 to 0 {
+// 	$h-font-control : $h-font-control+1;							// pow함수를 위한 변수
+// 	$h-fontsize : pow($h-ratio, $h-font-control)*$body-fontsize;	//기본 font-size인 16px 비율에 맞추기 위해 $body-fontsize를 곱함
+// 	$h-lineheight : line-height-num($h-fontsize);
+
+// 	h#{$htag} {
+// 		font-size: $h-fontsize+rem;
+// 		line-height: $h-lineheight*$root-fontsize+px;				//비율 맞추기 위해 $root-fontsize 를 곱함.
+// 		margin-top: $line-height+rem;
+// 		background: red;
+// 		opacity: 0.5;
+// 	}
+// }
+
+// // p태그
+// p {
+// 	font-size: $body-fontsize+rem;						// 16px
+// 	line-height: $line-height*$root-fontsize+px;
+// 	margin-top: $line-height+rem;
+
+// 	//보기좋게
+// 	background: blue;
+// 	color: white;
+// 	opacity : 0.5;
+// }
+
+// span{
+// 	background:black;
+// }
+
+// ul > li{
+// 	line-height: $line-height*$root-fontsize+px;
+// }
+
+// .first{
+// 	background: blue;
+// 	color:white;
+// }
+
+
+// // line-height를 px로 바꿔줘야지, 근사값이 안들어가서 오차가 안생김
