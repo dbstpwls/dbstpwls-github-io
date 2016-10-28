@@ -82,11 +82,11 @@ function initHtml($this) {
 	});
 
 
-	$this.html('<h1>H1 가</h1><h2>H2 가</h2><h3>H3 가</h3><h4>H4 가</h4><h5>H5 가</h5><h6>H6 가</h6><p>1 line = '+lineHeight+'rem</p>');
+	$this.html('<h1>H1 가</h1><h2>H2 가</h2><h3>H3 가</h3><h4>H4 가</h4><h5>H5 가</h5><h6>H6 가</h6><p>1 line = '+lineHeight+'rem</p><ul>UL<li>li</li></ul>');
 	$this.css({
 		'font-size' : 10 +'px'
 	});
-	$this.find('p').css({
+	$this.find('p, ul').css({
 		'font-size' : bodyFontSize+'px',
 		'margin-top' : lineHeight+'rem',
 		'line-height' : lineHeightNum(bodyFontSize/10)+'rem',
@@ -104,8 +104,8 @@ function initHtml($this) {
 
 
 function initCss($this, $this2) {
-	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
-	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight*10+'px;\n</p><p>}</p>';
+	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
+	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight*10+'px;\n</p><p>}</p>';
 
 	for(var key in outPutHSize){
 		outPutHSize[key];

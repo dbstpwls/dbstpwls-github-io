@@ -5,7 +5,7 @@
 html {
 	font-size:10px;
 }
-ul {
+html>ul {
 	font-size: 16px;
 	line-height: 24px;
 	list-style: none;
@@ -19,6 +19,9 @@ ul {
 	font-size:16px;
 	line-height: 250px;
 	color:gray;
+}
+.default{
+	min-height: 274px;
 }
 .other{
 	height: 250px;
@@ -39,7 +42,7 @@ section p{
 	font-size:16px;
 	line-height: 24px;
 }
-section ul {
+section>ul{
 	width: 400px;
 	border:3px solid #e0e0e0;
 	box-sizing: border-box;
@@ -47,16 +50,17 @@ section ul {
 	margin-right:20px;
 }
 
-section ul>li {
+section>ul>li{
 	color:gray;
+	font-size:16px;
 	margin:21px;
 	margin-bottom:23px;
 }
-section ul label {
+section>ul label {
 	display:block;
 	width: 100%;
 }
-section ul input {
+section>ul input {
 	border : 2px solid #adadad;
 	box-sizing: border-box;
 	width: 80px;
@@ -109,4 +113,7 @@ section::after{
 .title{
 	font-size: 20px;
 	color:#ff3f3f;
+}
+#result-html li{
+	margin-left:40px;
 }
