@@ -14,16 +14,25 @@ $(document).ready(function () {
 	init()
 
 	initH(1.25);								// 비율에 맞춘 h태그 삽입
-	insert('p', 16);							// 다른태그 삽입
 	// insertBaseLine($('body'), baseLine);				// base-line 삽입
 
+	var control = 0;
 	$('.complete').click(function () {
 		initEvent();
 		initHtml($resultHtml);
-		initCss($resultCss);
+		initCss($resultCss1, $resultCss2);
+		$('.result-css').css({
+			'border-top' :10+'px solid #ff6a6a'
+		});
+
+		control++;
+		if(control ==1){
+			$('#result-html').after('<p class="title">- REM - </p>');
+			$('.result-css.px').after('<p class="title">- PX - </p>');
+		}
 	});
 
-	$resultCss.click (function () {
+	$('.result-css').click (function () {
 		copyHelp($(this));
 	});
 	$('.other').click (function () {
@@ -41,7 +50,8 @@ function init() {
 	outPutHLineHeight = [];
 
 	$resultHtml = $('#result-html'),
-	$resultCss = $('#result-css');
+	$resultCss1 = $('.result-css').eq(0);
+	$resultCss2 = $('.result-css').eq(1);
 }
 
 function initEvent() {
@@ -63,36 +73,50 @@ function copyHelp($this) {
 }
 
 function initHtml($this) {
-	rootFontSize = inputVal[0],
-	bodyFontSize = 16/rootFontSize,
+	bodyFontSize = inputVal[0],
 	baseLine = inputVal[1],
-	lineHeight = baseLine/rootFontSize,
+	lineHeight = baseLine/10,
 	HR = inputVal[2];
 	$('html').css({
-		'font-size' : rootFontSize+'px'
+		'font-size' : 10+'px'
 	});
 
 
-	$this.html('<h1>H1</h1><h2>H2</h2><h3>H3</h3><h4>H4</h4><h5>H5</h5><h6>H6</h6><p>1 line = '+lineHeight+'rem</p>');
+	$this.html('<h1>H1 가</h1><h2>H2 가</h2><h3>H3 가</h3><h4>H4 가</h4><h5>H5 가</h5><h6>H6 가</h6><p>1 line = '+lineHeight+'rem</p>');
 	$this.css({
-		'font-size' : rootFontSize +'px'
+		'font-size' : 10 +'px'
+	});
+	$this.find('p').css({
+		'font-size' : bodyFontSize+'px',
+		'margin-top' : lineHeight+'rem',
+		'line-height' : lineHeightNum(bodyFontSize/10)+'rem',
+
+		//보기좋게
+		background: 'blue',
+		opacity : 0.7,
+		color : 'white'
 	});
 	initH(HR);
 	insertBaseLine($this, baseLine);
 
-	$('.other').html('<p>\tfont-size :'+bodyFontSize+'rem\n</p><p>\tline-height :'+lineHeight+'rem</p>');
+	$('.other').html('<p>\tfont-size :'+bodyFontSize+'px\n</p><p>\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem or '+lineHeightNum(bodyFontSize/10)*10+'px</p>');
 }
 
 
-function initCss($this) {
-	var resultCss = '<p>html {\n</p><p class="indent">\tfont-size :'+rootFontSize+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'rem;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
+function initCss($this, $this2) {
+	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
+	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight*10+'px;\n</p><p>}</p>';
+
 	for(var key in outPutHSize){
 		outPutHSize[key];
 		outPutHLineHeight[key];
-		resultCss +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>'
+		resultCssRem +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>'
+
+		resultCssPx +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p><p>\n}</p>'
 	}
 
-	$this.html(resultCss);
+	$this.html(resultCssRem);
+	$this2.html(resultCssPx);
 
 }
 
@@ -124,10 +148,10 @@ function initH(ratio) {
 	var Hcontrol = 7;
 	for(var i = 1; i < 7; i++){
 		Hcontrol--;
-		var HfontSizeRem = Math.pow(ratio, i)*bodyFontSize,
+		var HfontSizeRem = Math.pow(ratio, i)*1.6,
 			HLineHeight = lineHeightNum(HfontSizeRem);
 		$('h'+Hcontrol).css({
-			'font-size' : HfontSizeRem +'em',
+			'font-size' : HfontSizeRem +'rem',
 			'margin-top' : lineHeight+'rem',
 			'line-height' : HLineHeight+'rem',
 			'background' : 'blue',
@@ -147,16 +171,6 @@ function insert(name, fontSize) {
 }
 
 function lineHeightNum(fontRem) {
-	var fontPx = fontRem*rootFontSize;
-	var linePx = Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight*rootFontSize;
-	var divide = (linePx - fontPx)/baseLine;
 
-	console.log(fontPx, linePx,divide);
-
-	if(divide > 0.75){
-		divide = Math.round(divide);
-		return Math.ceil(fontRem*rootFontSize/baseLine-divide)*lineHeight;
-	}else{
-		return Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight;
-	}
+	return Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight;
 }

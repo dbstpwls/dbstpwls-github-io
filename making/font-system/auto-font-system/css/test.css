@@ -87,10 +87,7 @@ section::after{
 
 .result-pannel>div{
 	width: 100%;
-	margin-top: 48px;
-	margin-bottom:48px;
-}
-#result-html{
+	margin-bottom:120px;
 }
 
 .add{
@@ -102,4 +99,14 @@ section::after{
 }
 .indent{
 	text-indent: 30px;
+}
+.result-css{
+	width: 50%;
+	float:left;
+	font-size: initial;
+}
+
+.title{
+	font-size: 20px;
+	color:#ff3f3f;
 }
