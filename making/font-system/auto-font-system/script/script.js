@@ -129,6 +129,7 @@ function initHeading() {
 		}
 		Hcontrol--;
 		$('h'+Hcontrol).css({
+			'color' : 'white',
 			'margin-top' : lineHeight+'rem',
 			'background' : 'blue',
 			'opacity' : 0.7
@@ -139,7 +140,7 @@ function initHeading() {
 //Default Function
 function insertBaseLine($this, baseLine) {
 	var height =  parseInt($this.css('height')),
-		baseLineNum = height/baseLine;
+		baseLineNum = height/baseLine+4;
 	$this.append('<div class="base-line-wrap"></div>');
 
 	for(var i = 0; i<=baseLineNum; i++)
