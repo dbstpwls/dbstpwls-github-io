@@ -17,17 +17,24 @@ html>ul {
 	display: block;
 	text-align: center;
 	font-size:16px;
-	line-height: 250px;
 	color:gray;
+	display: flex;
 }
 .default{
 	min-height: 274px;
 }
 .other{
 	height: 250px;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 .other p{
 	line-height:125px;
+}
+.other li{
+	float:left;
+	margin-top: 14px;
+	margin-left: 50px;
 }
 .default p, .other p{
 	text-align: center;

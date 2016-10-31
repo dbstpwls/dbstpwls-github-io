@@ -8,7 +8,6 @@ var outPutHSize = null, outPutHLineHeight = null, inputVal = [], otherInputVal =
 var $resultHtml = null,
 	$resultCss = null;
 
-
 $(document).ready(function () {
 	// 초기화
 	init()
@@ -35,9 +34,6 @@ $(document).ready(function () {
 	$('.result-css').click (function () {
 		copyHelp($(this));
 	});
-	$('.other').click (function () {
-		copyHelp($	(this));
-	});
 });
 
 function init() {
@@ -49,7 +45,7 @@ function init() {
 	outPutHSize = [];
 	outPutHLineHeight = [];
 
-	$resultHtml = $('#result-html'),
+	$resultHtml = $('#result-html');
 	$resultCss1 = $('.result-css').eq(0);
 	$resultCss2 = $('.result-css').eq(1);
 }
@@ -65,6 +61,7 @@ function initEvent() {
 		index2++;
 		otherInputVal[index2] = $(this).val();
 	});
+	initHeading();
 }
 
 function copyHelp($this) {
@@ -77,15 +74,21 @@ function initHtml($this) {
 	baseLine = inputVal[1],
 	lineHeight = baseLine/10,
 	HR = inputVal[2];
+	var htmlResult = '';
+	initH(HR);
+	initHeading();
 	$('html').css({
 		'font-size' : 10+'px'
 	});
-
-
-	$this.html('<h1>H1 가</h1><h2>H2 가</h2><h3>H3 가</h3><h4>H4 가</h4><h5>H5 가</h5><h6>H6 가</h6><p>1 line = '+lineHeight+'rem</p><ul>UL<li>li</li></ul>');
+	console.log(outPutHSize);
+	for(var key = 6; key>=1; key--){
+		htmlResult += '<h'+key+' style="font-size:'+outPutHSize[6-key]+'rem; line-height : '+outPutHLineHeight[6-key]+'rem">H'+key+'</h'+key+'>';
+	}
+	$this.html(htmlResult+'<p>P 1 line = '+lineHeight+'rem</p><ul>UL<li>li</li></ul>');
 	$this.css({
 		'font-size' : 10 +'px'
 	});
+
 	$this.find('p, ul').css({
 		'font-size' : bodyFontSize+'px',
 		'margin-top' : lineHeight+'rem',
@@ -96,20 +99,16 @@ function initHtml($this) {
 		opacity : 0.7,
 		color : 'white'
 	});
-	initH(HR);
 	insertBaseLine($this, baseLine);
-
-	$('.other').html('<p>\tfont-size :'+bodyFontSize+'px\n</p><p>\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem or '+lineHeightNum(bodyFontSize/10)*10+'px</p>');
 }
 
 
 function initCss($this, $this2) {
-	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight+'rem;\n</p><p>}</p>';
-	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeight*10+'px;\n</p><p>}</p>';
+	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
+	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p>}</p>';
 
+	initHeading();
 	for(var key in outPutHSize){
-		outPutHSize[key];
-		outPutHLineHeight[key];
 		resultCssRem +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>'
 
 		resultCssPx +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p><p>\n}</p>'
@@ -120,6 +119,22 @@ function initCss($this, $this2) {
 
 }
 
+function initHeading() {
+	var $otherInput = $('.other input');
+	var Hcontrol = 7;
+	for(var key in $otherInput){
+		if( !$otherInput.eq(key).val() == false){
+			outPutHSize[key] = $otherInput.eq(key).val()/10;
+			outPutHLineHeight[key] = lineHeightNum(outPutHSize[key]);
+		}
+		Hcontrol--;
+		$('h'+Hcontrol).css({
+			'margin-top' : lineHeight+'rem',
+			'background' : 'blue',
+			'opacity' : 0.7
+		});
+	}
+}
 
 //Default Function
 function insertBaseLine($this, baseLine) {
@@ -163,14 +178,11 @@ function initH(ratio) {
 }
 
 function insert(name, fontSize) {
-	var fontSizeRem = fontSize/rootFontSize;
-	$(name).css({
-		'font-size' : fontSizeRem + 'rem',
-		lineHeight : lineHeightNum(fontSizeRem)+'rem'
-	});
+	var fontSizeRem = fontSize/10;
+	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
+	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p>}</p>';
 }
 
 function lineHeightNum(fontRem) {
-
 	return Math.ceil(fontRem*rootFontSize/baseLine)*lineHeight;
 }
