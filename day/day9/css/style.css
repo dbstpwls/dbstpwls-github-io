@@ -1,0 +1,33 @@
+.row:nth-child(1) .box{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 14px;
+	color : #756e7b;
+}
+.row:nth-child(1) .box img{
+	vertical-align: bottom;
+}
+.row:nth-child(1) .box h2{
+	margin-top: 20px;
+	line-height: 20px;
+}
+.row:nth-child(1) .box p{
+	padding-top: 10px;
+	width: 200px;
+	height: 60px;
+	margin: 0 auto;
+}
+.row:nth-child(1) .box h2{
+	font-size: 22px;
+	color : #93444c;
+}
+
+.box.col-3.mask{
+	background: url(../img/mask_deco.png);
+	height: 240px;
+}
+.box.col-3.mask img{
+	display: block;
+	margin: 0 auto;
+	margin-top: 93.5px;
+}

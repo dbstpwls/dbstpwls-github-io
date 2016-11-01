@@ -10,12 +10,10 @@ $('document').ready(function () {
 			$('.gill-text').removeClass('hover');
 		}
 	});
-	window.onkeydown = function (e) {
-		var keyCode = e.keyCode;
-		if(keyCode == 71){
+	document.onkeydown = function (e) {
+		if(e.keyCode == 71 && e.keyCode == 70){
 			$('.grid').toggle();
 			$('.intro-text').fadeOut();
 		}
 	}
-
 });
