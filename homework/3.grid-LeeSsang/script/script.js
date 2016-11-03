@@ -11,7 +11,7 @@ $('document').ready(function () {
 		}
 	});
 	document.onkeydown = function (e) {
-		if(e.keyCode == 71 && e.keyCode == 70){
+		if(e.keyCode == 71 && e.shiftKey == true){
 			$('.grid').toggle();
 			$('.intro-text').fadeOut();
 		}
