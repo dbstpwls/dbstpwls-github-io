@@ -19,10 +19,20 @@ body{
 	width: 200px;
 	height: 60px;
 	margin: 0 auto;
+	color: #605867;
 }
 .row:nth-child(1) .box h2{
 	font-size: 22px;
 	color : #93444c;
+	#74479a
+}
+.row:nth-child(1) .box:nth-child(2) h2{
+	font-size: 22px;
+	color : #74479a;
+}
+.row:nth-child(1) .box:nth-child(3) h2{
+	font-size: 22px;
+	color : #507101;
 }
 
 .box.col-3.mask{
