@@ -109,7 +109,7 @@ function initHtml($this) {
 function initCss($this, $this2, $this3) {
 	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p>}</p>';
-	var resultAll = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n\tfont-size : '+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n\tline-height : '+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
+	var resultAll = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;</p><p class="indent">\n\tline-height : '+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p class="indent">\tfont-size :'+bodyFontSize+'rem;</p><p class="indent">\n\tline-height : '+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 
 	initHeading();
 	for(var key in outPutHSize){
@@ -117,7 +117,7 @@ function initCss($this, $this2, $this3) {
 
 		resultCssPx +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p><p>\n}</p>';
 
-		resultAll += '\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;</p><p class="indent">\n\tfont-size : '+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p>\n\t<p class="indent">line-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>';
+		resultAll += '\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;</p><p class="indent">\n\tline-height : '+outPutHLineHeight[key]*10+'px;\n</p><p class="indent">\tfont-size :'+outPutHSize[key]+'rem;</p>\n\t<p class="indent">line-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>';
 	}
 
 	$this.html(resultCssRem);
