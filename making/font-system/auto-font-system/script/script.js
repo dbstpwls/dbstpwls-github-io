@@ -109,7 +109,7 @@ function initHtml($this) {
 function initCss($this, $this2, $this3) {
 	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p>}</p>';
-	var resultAll = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n\tfont-size : '+bodyFontSize/10+'rem\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n\tline-height : '+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
+	var resultAll = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n\tfont-size : '+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n\tline-height : '+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 
 	initHeading();
 	for(var key in outPutHSize){
