@@ -6,7 +6,8 @@ var rootFontSize = null,
 var outPutHSize = null, outPutHLineHeight = null, inputVal = [], otherInputVal = [];
 
 var $resultHtml = null,
-	$resultCss = null;
+	$resultCss = null,
+	$resultAll = null;
 
 $(document).ready(function () {
 	// 초기화
@@ -19,7 +20,7 @@ $(document).ready(function () {
 	$('.complete').click(function () {
 		initEvent();
 		initHtml($resultHtml);
-		initCss($resultCss1, $resultCss2);
+		initCss($resultCss1, $resultCss2, $resultCss3);
 		$('.result-css').css({
 			'border-top' :10+'px solid #ff6a6a'
 		});
@@ -28,6 +29,7 @@ $(document).ready(function () {
 		if(control ==1){
 			$('#result-html').after('<p class="title">- REM - </p>');
 			$('.result-css.px').after('<p class="title">- PX - </p>');
+			$('.result-css.all').before('<p class="title">- All - </p>');
 		}
 	});
 
@@ -48,6 +50,7 @@ function init() {
 	$resultHtml = $('#result-html');
 	$resultCss1 = $('.result-css').eq(0);
 	$resultCss2 = $('.result-css').eq(1);
+	$resultCss3 = $('.result-css').eq(2);
 }
 
 function initEvent() {
@@ -84,7 +87,7 @@ function initHtml($this) {
 	for(var key = 6; key>=1; key--){
 		htmlResult += '<h'+key+' style="font-size:'+outPutHSize[6-key]+'rem; line-height : '+outPutHLineHeight[6-key]+'rem">H'+key+'</h'+key+'>';
 	}
-	$this.html(htmlResult+'<p>P 1 line = '+lineHeight+'rem</p><ul>UL<li>li</li></ul>');
+	$this.html(htmlResult+'<p>P 1 line = '+lineHeight+'rem or '+lineHeight*10+'px</p><ul>UL<li>li</li></ul>');
 	$this.css({
 		'font-size' : 10 +'px'
 	});
@@ -103,20 +106,23 @@ function initHtml($this) {
 }
 
 
-function initCss($this, $this2) {
+function initCss($this, $this2, $this3) {
 	var resultCssRem = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize/10+'rem;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 	var resultCssPx = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n</p><p>}</p>';
+	var resultAll = '<p>html {\n</p><p class="indent">\tfont-size :'+10+'px;\n</p><p>}\n</p><p>body, p, ul, table {\n</p><p class="indent">\tfont-size :'+bodyFontSize+'px;\n\tfont-size : '+bodyFontSize/10+'rem\n</p><p class="indent">\tline-height :'+lineHeightNum(bodyFontSize/10)*10+'px;\n\tline-height : '+lineHeightNum(bodyFontSize/10)+'rem;\n</p><p>}</p>';
 
 	initHeading();
 	for(var key in outPutHSize){
-		resultCssRem +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>'
+		resultCssRem +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>';
 
-		resultCssPx +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p><p>\n}</p>'
+		resultCssPx +='\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p><p>\n}</p>';
+
+		resultAll += '\n<p>h'+(6-key)+' {\n</p><p class="indent">\tfont-size:'+outPutHSize[key]*10+'px;</p><p class="indent">\n\tfont-size : '+outPutHSize[key]+'rem;\n</p><p class="indent">\tline-height :'+outPutHLineHeight[key]*10+'px;</p>\n\t<p class="indent">line-height :'+outPutHLineHeight[key]+'rem;</p><p>\n}</p>';
 	}
 
 	$this.html(resultCssRem);
 	$this2.html(resultCssPx);
-
+	$this3.html(resultAll);
 }
 
 function initHeading() {
