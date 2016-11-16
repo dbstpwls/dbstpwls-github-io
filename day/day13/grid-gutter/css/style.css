@@ -1,0 +1,44 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+p{
+	line-height: 24px;
+	font-size: 14px;
+}
+a{
+	text-decoration: none;
+	letter-spacing: 0.1em;
+}
+.banner {
+	height: 340px;
+	background: hsla(16, 95%, 54%, 1);
+	color: white;
+	letter-spacing: 0.1em;
+}
+.banner .goose img{
+	margin-left : 25px;
+}
+.banner .text-box h3{
+	font-size: 34px;
+	margin-top : 70px;
+	margin-bottom : 30px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	line-height: 30px;
+}
+.banner .text-box p{
+	margin-top : -7px;
+	margin-bottom : 60px;
+}
+.banner .text-box a{
+	font-size : 12px;
+	padding : 1.42em 4em;
+	border: 1px solid hsla(0, 0%, 100%, 0.4);
+	color: white;
+	text-transform: uppercase;
+}
+.banner .text-box a:focus{
+	outline : none;
+	border: none;
+	box-shadow: 0 0 0 5px hsla(62, 100%, 55%, 0.5);
+}
