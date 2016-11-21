@@ -1,7 +1,23 @@
-figure:after{
-	content : "";
+figure::after{
+	position: absolute;
+	display: block;
+	content : "after : 1개";
+	top: 20px;
+}
+
+figure, div{
+	transition: all 0.4s;
 	width: 100px;
 	height: 100px;
-	display: block;
 	background: red;
+}
+figure:hover{
+	background: yellow;
+}
+
+div{
+	margin-bottom: 10px;
+}
+div:nth-child(2n){
+	background: blue;
 }
