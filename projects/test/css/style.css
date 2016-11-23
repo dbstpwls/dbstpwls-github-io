@@ -1,23 +1,143 @@
-figure::after{
-	position: absolute;
-	display: block;
-	content : "after : 1개";
-	top: 20px;
+h1{
+	text-align: center;
 }
-
-figure, div{
-	transition: all 0.4s;
+div, p, ul, li, ol, a, span, body, img{
+	padding: 0;
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+.board{
+	width: 960px;
+	background: #dcdcdc;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+}
+.board h2{
+	background: powderblue;
+	margin : 0 ;
+	padding : 10px;
+}
+.board div{
 	width: 100px;
 	height: 100px;
-	background: red;
-}
-figure:hover{
-	background: yellow;
+	margin: 10px 10px;
+	background: tomato;
 }
 
-div{
-	margin-bottom: 10px;
+
+.board.a div{
+	margin : 0 auto;
 }
-div:nth-child(2n){
+
+.board.b div{
+	width:50%;
+	float:left;
+	margin: 0;
+}
+.board.b div.first{
+	background: blue;
+}
+.board.b{
+	overflow:auto;
+}
+
+.board.b.c div{
+	width: 60vh;
+}
+
+.selector>ul{
+	overflow: auto;
+	border-bottom : 4px solid black;
+}
+.selector>.two h2{
+	float:left;
+	height: 100px;
+	line-height: 100px;
+	width: 240px;
+}
+.selector div{
+	float:left;
+}
+.selector>ul.two>li{
+	width: 480px;
+	float:left;
+}
+.selector>ul.a>li.a>div:after{
+	content : ":after";
+	color: white;
+	width: 100px;
+	text-align: center;
+	display: block;
+	line-height: 100px;
+	font-size: 20px;
+}
+.selector>ul.a>li.b>div::after{
+	content : "::after";
+	color: white;
+	width: 100px;
+	text-align: center;
+	display: block;
+	line-height: 100px;
+	font-size: 20px;
+}
+.selector>ul.b>li.a>div:before{
+	content : ":before";
+	color: white;
+	width: 100px;
+	text-align: center;
+	display: block;
+	line-height: 100px;
+	font-size: 20px;
+}
+.selector>ul.b>li.b>div::before{
+	content : "::before";
+	color: white;
+	width: 100px;
+	text-align: center;
+	display: block;
+	line-height: 100px;
+	font-size: 20px;
+}
+.selector>ul.e.last-child>li>div.wrap div:last-child{
+	background: blue;
+}
+.selector>ul.e.first-child>li>div.wrap div:first-child{
+	background: blue;
+}
+.selector>ul.e.two h2{
+	width: 400px;
+}
+.selector>ul.e.two li{
+	width: 960px;
+}
+.selector>ul.e.two li>.wrap{
+	width: 540px;
+	height: 120px;
+	margin: 0;
+	background: none;
+}
+.selector>ul.e.two.num li>.wrap div:nth-child(1){
+	background: blue;
+}
+.selector>ul.e.two.even li>.wrap div:nth-child(even){
+	background: blue;
+}
+.selector>ul.e.two.odd li>.wrap div:nth-child(odd){
+	background: blue;
+}
+.selector>ul.e.two.n li>.wrap div:nth-child(2n){
+	background: blue;
+}
+.selector>ul.e.two.n-plus li>.wrap div:nth-child(3n+1){
+	background: blue;
+}
+
+.board.c.d div{
+	min-width : 480px;
+}
+.board.c.d div.first{
 	background: blue;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mobile-Test</title>
+	<title>IE TEST PAGE</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="script/jquery.ui.touch.js"></script>
@@ -12,11 +12,123 @@
 	<![endif]-->
 </head>
 <body>
-	<figure>
-	</figure>
-
-	<div></div>
-	<div></div>
-	<div></div>
+	<h1>- 크기 제어 -</h1>
+	<div class="board a">
+		<h2>margin: 0 auto</h2>
+		<div></div>
+	</div>
+	<div class="board b">
+		<h2>width : 50% (%값)</h2>
+		<div class="first"></div>
+		<div></div>
+	</div>
+	<div class="board b c">
+		<h2>width : 50vw (vw값)</h2>
+		<div class="first"></div>
+		<div></div>
+	</div>
+	<div class="board b d">
+		<h2>min-width : 480px</h2>
+		<div class="first"></div>
+		<div></div>
+	</div>
+	<h1>- 셀렉터 (Selector) -</h1>
+	<div class="board selector">
+		<ul class="two a">
+			<li class="a">
+				<h2>:after ( : 1개 )</h2>
+				<div></div>
+			</li>
+			<li class="b">
+				<h2>::after ( : 2개 )</h2>
+				<div></div>
+			</li>
+		</ul>
+		<ul class="two b">
+			<li class="a">
+				<h2>:before ( : 1개 )</h2>
+				<div></div>
+			</li>
+			<li class="b">
+				<h2>::before ( : 2개 )</h2>
+				<div></div>
+			</li>
+		</ul>
+		<ul class="e two last-child">
+			<li>
+				<h2>:last-child ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two first-child">
+			<li>
+				<h2>:first-child ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two num">
+			<li>
+				<h2>:nth-child(1) ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two even">
+			<li>
+				<h2>:nth-child(even) ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two odd">
+			<li>
+				<h2>:nth-child(odd) ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two n">
+			<li>
+				<h2>:nth-child(2n) ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="e two n-plus">
+			<li>
+				<h2>:nth-child(3n+1) ( 이건 : 최대 1개임)</h2>
+				<div class="wrap">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</li>
+		</ul>
+	</div>
 </body>
 </html>

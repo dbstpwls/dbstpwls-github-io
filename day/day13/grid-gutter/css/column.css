@@ -1,8 +1,8 @@
 .row{
 	width: 100%;
 	min-height: 100px;
-	margin-bottom: 40px;
 	position: relative;
+	margin-bottom: 30px;
 }
 .row::after{
 	content: " ";
