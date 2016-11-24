@@ -12,6 +12,5 @@ $(document).ready(function(){
 	$('.modal li').click(function () {
 		count = $(this).index();
 		$(document).scrollTop(top[count]);
-		modalLi(count);
 	});
 });
