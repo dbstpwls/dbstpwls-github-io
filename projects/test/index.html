@@ -5,13 +5,18 @@
 	<title>IE TEST PAGE</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="script/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="script/jquery.ui.touch.js"></script>
 	<script type="text/javascript" src="script/script.js"></script>
 	<!--[if lt IE 9]>
 
 	<![endif]-->
 </head>
 <body>
+
+	<nav class="modal">
+		<ul>
+		</ul>
+	</nav>
+
 	<h1>- 크기 제어 -</h1>
 	<div class="board a">
 		<h2>margin: 0 auto</h2>
@@ -27,11 +32,10 @@
 		<div class="first"></div>
 		<div></div>
 	</div>
-	<div class="board b d">
-		<h2>min-width : 480px</h2>
-		<div class="first"></div>
-		<div></div>
-	</div>
+	<h2 class="per max-width">max-width : 480px</h2>
+	<h2 class="per min-width">min-width : 960px</h2>
+
+
 	<h1>- 셀렉터 (Selector) -</h1>
 	<div class="board selector">
 		<ul class="two a">
@@ -54,6 +58,31 @@
 				<div></div>
 			</li>
 		</ul>
+		<ul class="two a-tag">
+			<li class="a">
+				<h2>:hover</h2>
+				<a class="hover" href="">a-Tag</a>
+			</li>
+			<li class="a">
+				<h2>:hover</h2>
+				<div class="hover">div-Tag</div>
+			</li>
+		</ul>
+		<ul class="two a-tag">
+			<li class="a">
+				<h2>:visited</h2>
+				<a class="visited" href="">a-Tag</a>
+			</li>
+			<li class="a">
+				<h2>:focus</h2>
+				<a class="focus" href="">a-Tag</a>
+			</li>
+			<li class="b">
+				<h2>:active</h2>
+				<a class="active">a-Tag</a>
+			</li>
+		</ul>
+
 		<ul class="e two last-child">
 			<li>
 				<h2>:last-child ( 이건 : 최대 1개임)</h2>
@@ -130,5 +159,84 @@
 			</li>
 		</ul>
 	</div>
+
+	<h1>- input type -</h1>
+	<div class="board selector">
+		<ul class="two input">
+			<li>
+				<h2>type = time</h2>
+				<input type="time">
+			</li>
+			<li>
+				<h2>type = color</h2>
+				<input type="color">
+			</li>
+			<li>
+				<h2>type = date</h2>
+				<input type="date">
+			</li>
+			<li>
+				<h2>datetime-local</h2>
+				<input type="datetime-local">
+			</li>
+			<li>
+				<h2>type = email</h2>
+				<form action="#">
+					<input type="email" required>
+					<button tpye="submit">test</button>
+				</form>
+			</li>
+			<li>
+				<h2>type = url</h2>
+				<form action="#">
+					<input type="url" required>
+					<button tpye="submit">test</button>
+				</form>
+			</li>
+			<li>
+				<h2>type = file</h2>
+				<input type="file">
+			</li>
+			<li>
+				<h2>type = range</h2>
+				<input type="range">
+			</li>
+		</ul>
+	</div>
+
+	<h1>- animation -</h1>
+	<ul class="board transition">
+		<ul>
+			<li>
+				<h2>transition</h2>
+				<div class="transition">div-Tag</div>
+				<a class="transition">a-Tag</a>
+			</li>
+			<li>
+				<h2>animation</h2>
+				<div class="animation-three">1s<br>%<br></div>
+				<div class="animation-four">1s<br>from to<br></div>
+				<div class="animation-one">1s<br>%<br>infinite alternative</div>
+				<div class="animation-two">1s<br>from to<br>infinite alternative</div>
+			</li>
+			<li>
+				<h2>transform <span class="red">(no - perspective)</span></h2>
+				<div class="translatex">translateX</div>
+				<div class="translatey">translateY</div>
+				<div class="rotate">rotate(20deg)</div>
+				<div class="rotatex">rotateX</div>
+				<div class="rotatey">rotateY</div>
+			</li>
+			<li class="pers">
+				<h2>transform <span class="red">(exist - perspective)</span></h2>
+				<a href="https://www.w3.org/Talks/2012/0416-CSS-WWW2012/Demos/transforms/demo_perspective_origin.html"><div class="per-translatez"><span class="white">hover!</span><br>translateZ<br>pes: 300px<br>transZ(100px)</div></a>
+				<div class="rotatex">rotateX</div>
+				<div class="rotatey">rotateY</div>
+				<h2>(backface-visility : hidden)</h2>
+				<div class="rotatey-back">rotateY</div>
+			</li>
+		</ul>
+	</ul>
+
 </body>
 </html>

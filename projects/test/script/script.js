@@ -1,11 +1,17 @@
 $(document).ready(function(){
-	// var $board = $('.board');
-	// $board.each(function (index) {
-	// 	var text = $(this).children('h2').text();
-	// 	if(text.indexOf('::') == -1){
-	// 		var cc = "bacground";
-	// 		var aa = "red"
-	// 		$(this).children('div').css("background", aa);
-	// 	}
-	// });
+	var $title = $('h1');
+	var top = new Array;
+	var count = -1;
+
+	$title.each(function (index) {
+		top[index] = $(this).position().top;
+		var text = $(this).text();
+		$('.modal>ul').append('<li>'+text+'</li>');
+	});
+
+	$('.modal li').click(function () {
+		count = $(this).index();
+		$(document).scrollTop(top[count]);
+		modalLi(count);
+	});
 });

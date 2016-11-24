@@ -45,7 +45,10 @@ li{
 }
 
 .board.b.c div{
-	width: 60vh;
+	width: 60vw;
+}
+.board.b.e div{
+	max-width: 480px;
 }
 
 .selector>ul{
@@ -140,4 +143,173 @@ li{
 }
 .board.c.d div.first{
 	background: blue;
+}
+
+
+h2.per{
+	background: tomato;
+	text-align: center;
+}
+h2.max-width{
+	max-width: 480px;
+}
+h2.min-width{
+	min-width: 960px;
+}
+
+ul.two.a-tag h2{
+	background: #71d6e2;
+}
+ul.two.a-tag a{
+	background: #ff8d8d;
+	color: white;
+	display: block;
+	text-align: center;
+	line-height: 100px;
+	margin-top: 10px;
+}
+ul.two.a-tag a.hover:hover{
+	background: powderblue;
+}
+ul.two.a-tag a.active:active{
+	background: powderblue;
+}
+ul.two.a-tag a.visited:visited{
+	background: powderblue;
+}
+ul.two.a-tag a.focus:focus{
+	background: powderblue;
+}
+ul.two.a-tag div:hover{
+	background: powderblue;
+}
+ul.two.a-tag div{
+	line-height: 100px;
+	text-align: center;
+	color:white
+}
+
+.board .input h2{
+	width: 200px;
+}
+.board .input{
+	text-align: center;
+}
+.board input{
+	margin-top: 50px;
+}
+
+.board.transition li::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.board .transition{
+	transition: all 0.4s;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+}
+.board a.transition{
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: tomato;
+	margin-top: 10px;
+}
+.board .transition:hover{
+	background: blue;
+}
+
+.board.transition .animation-one{
+	animation: bgpercent 1s infinite alternate;
+}
+.board.transition .animation-two{
+	animation: bgfromto 1s infinite alternate;
+}
+.board.transition .animation-three{
+	animation: moveper 10s;
+	animation-fill-mode: both;
+}
+.board.transition .animation-four{
+	animation: movefrom 10s;
+	animation-fill-mode: both;
+}
+@keyframes moveper{
+	100%{
+		margin-left: 400px;
+	}
+}
+@keyframes movefrom{
+	to{
+		margin-left: 400px;
+	}
+}
+
+@keyframes bgpercent{
+	100%{
+		background: blue;
+		color:white;
+	}
+}
+@keyframes bgfromto{
+	to{
+		background: blue;
+		color:white;
+	}
+}
+
+span.red{
+	color: red;
+}
+
+.board.transition .translatex{
+	transform: translateX(400px);
+}
+.board.transition .translatey{
+	transform: translateY(-50px);
+}
+.board.transition .rotatex{
+	transform: rotateX(50deg);
+}
+.board.transition .rotatey{
+	transform: rotateY(50deg);
+}
+.board.transition .rotate{
+	transform: rotate(20deg);
+}
+
+.board.transition [class ^= pers]{
+	perspective: 300px;
+}
+.board.transition .per-translatez{
+	transform: translateZ(10px);
+}
+
+span.white{
+	color: white;
+}
+
+.board.transition .rotatey-back{
+	backface-visibility: hidden;
+	transform: rotateY(91deg);
+}
+
+nav.modal{
+	position: fixed;
+	width: 150px;
+	text-align: center;
+	font-size: 18px;
+	color:white;
+	top: 400px;
+	right: 0;
+}
+nav.modal ul li{
+	opacity: 0.3;
+	background: yellow;
+	line-height: 30px;
+	margin-bottom: 30px;
+	color: black;
+	cursor: pointer;
 }
