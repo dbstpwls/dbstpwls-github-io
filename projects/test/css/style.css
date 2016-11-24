@@ -199,10 +199,8 @@ ul.two.a-tag div{
 	margin-top: 50px;
 }
 
-.board.transition li::after{
-	content: "";
-	display: block;
-	clear: both;
+.board.transition .wta{
+	height: 200px;
 }
 .board .transition{
 	transition: all 0.4s;
