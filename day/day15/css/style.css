@@ -1,0 +1,12 @@
+.container.flude.fix{
+	background: #000;
+	min-height: auto;
+	position: absolute;
+	top:0;
+	width: 100%;
+}
+
+.img{
+	padding-top: 100%;
+	background: url('../../../projects/landing-page/img/bright.png');
+}

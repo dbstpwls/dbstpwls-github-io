@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>격리된 float 레이아웃</title>
+	<link rel="stylesheet" href="css/fluid-GS-1200.css">
+	<link rel="stylesheet" href="css/isolate.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/flude-img.css">
+	<!--
+
+		margin 에 -값을 넣어주면 element를 당겨오는것을 생각. ( daum 로그인 메뉴 증권 탭 생각)
+		전부 당겨온 다음에 ( 모든 엘리먼트들의 위치선상이 같아짐 ) position: absolute를 준것과 같은 효과
+		- 100%가 아닌 다른 값을 넣어줘서 절대적인 위치를 잡아줌
+
+	 -->
+
+	 <!--
+		이미지 자동 resizing (Flude-img)
+	  -->
+</head>
+<body class="show-grid">
+
+	<div class="container flude fix">
+		<div class="row">
+			<div class="col-4">
+				<img src="../../projects/landing-page/img/bright.png" alt="aa" class="flude-img">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4">
+				<div class="rwd-bg img"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 crop-img">
+				<img src="../../homework/3.grid-LeeSsang/img/gary_crop.png" alt="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-4 bg-center-img">
+			</div>
+		</div>
+	</div>
+
+	<div class="container flude">
+		<div class="row">
+			<div class="isolate col-1 order-8">col 2</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

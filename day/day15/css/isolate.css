@@ -1,0 +1,51 @@
+html{
+	overflow-y: scroll;
+	font-size: 10px;
+}
+body{
+	margin: 0;
+	font-size: 1.6em;
+}
+
+/* end reset */
+
+[class *= col-]{
+	word-break: break-all;
+}
+
+[class ^= isolate]{
+	margin-left: -100%;
+}
+
+.order-1{
+	margin-left: 1.25%;
+}
+.order-2{
+	margin-left: 13.75%;
+}
+.order-3{
+	margin-left: 26.75%;
+}
+.order-4{
+	margin-left: 38.75%;
+}
+.order-5{
+	margin-left: 51.2499%;
+}
+.order-6{
+	margin-left: 63.7499%;
+}
+.order-7{
+	margin-left: 76.25%;
+}
+.order-8{
+	margin-left: 88.75%;
+}
+
+/*
+
+function cal(x){var a = 15+(120*(x-1))+15*(2*(x-1)); return a/1200*100}
+
+!양쪽에 margin값을 안뺴줬을 경우
+
+*/
