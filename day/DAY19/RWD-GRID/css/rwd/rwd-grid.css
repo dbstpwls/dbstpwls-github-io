@@ -1,0 +1,197 @@
+/*! grid/rwd-grid.css © yamoo9.net, 2016 */
+
+/*
+	중단점 설계
+	1(2),  2(3), 3(4)
+
+	mobile  	0 ~ 767
+	tablet  		768 ~ 1024
+	desktop 	1025 ~ 1300
+
+	중단점 프리픽스 설계
+	s - m - l ( o )
+
+*/
+body::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	background: linear-gradient(90deg, powderblue 0, powderblue 50%, tomato 50%, tomato 100%);
+	background-size: 16.67% 1px;
+	opacity: 0.2;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row{
+	margin-bottom: 20px
+}
+.row::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.col {
+	float: left;
+	box-sizing: border-box;
+	width: 100%;
+	border: 1px solid black;
+	background: #ff4040;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.row.gutter .col,
+.gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.col.gutters {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.no-gutters {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.m--1-2,
+.m--2-4 { width: calc(100% * (1/2)); }
+.m--1-3 { width: calc(100% * (1/3)); }
+.m--2-3 { width: calc(100% * (2/3)); }
+.m--1-4 { width: calc(100% * (1/4)); }
+.m--3-4 { width: calc(100% * (3/4)); }
+
+/* [M] tablet(8) view: 768px+ */
+@media only screen and (min-width: 768px) {
+  .t--1-2,
+  .t--2-4,
+  .t--3-6,
+  .t--4-8 { width: calc(100% * (1/2)); }
+  .t--1-3 { width: calc(100% * (1/3)); }
+  .t--2-3,
+  .t--2-6,
+  .t--4-6 { width: calc(100% * (2/3)); }
+  .t--1-4,
+  .t--2-8 { width: calc(100% * (1/4)); }
+  .t--3-4,
+  .t--6-8 { width: calc(100% * (3/4)); }
+  .t--1-5 { width: calc(100% * (1/5)); }
+  .t--2-5 { width: calc(100% * (2/5)); }
+  .t--3-5 { width: calc(100% * (3/5)); }
+  .t--4-5 { width: calc(100% * (4/5)); }
+  .t--1-6 { width: calc(100% * (1/6)); }
+  .t--5-6 { width: calc(100% * (5/6)); }
+  .t--1-7 { width: calc(100% * (1/7)); }
+  .t--2-7 { width: calc(100% * (2/7)); }
+  .t--3-7 { width: calc(100% * (3/7)); }
+  .t--4-7 { width: calc(100% * (4/7)); }
+  .t--5-7 { width: calc(100% * (5/7)); }
+  .t--6-7 { width: calc(100% * (6/7)); }
+  .t--1-8 { width: calc(100% * (1/8)); }
+  .t--3-8 { width: calc(100% * (3/8)); }
+  .t--5-8 { width: calc(100% * (5/8)); }
+  .t--7-8 { width: calc(100% * (7/8)); }
+}
+
+/* desktop(12) view: 1181px+ */
+@media only screen and (min-width: 1000px) {
+  .d--1-2,
+  .d--2-4,
+  .d--3-6,
+  .d--4-8,
+  .d--5-10,
+  .d--6-12  { width: calc(100% * (1/2));  }
+  .d--1-3,
+  .d--3-9,
+  .d--4-12  { width: calc(100% * (1/3));  }
+  .d--2-3,
+  .d--2-6,
+  .d--4-6,
+  .d--6-9,
+  .d--8-12  { width: calc(100% * (2/3));   }
+  .d--1-4,
+  .d--2-8,
+  .d--3-12  { width: calc(100% * (1/4));   }
+  .d--3-4,
+  .d--6-8,
+  .d--9-12  { width: calc(100% * (3/4));   }
+  .d--1-5,
+  .d--2-10  { width: calc(100% * (1/5));   }
+  .d--2-5,
+  .d--4-10  { width: calc(100% * (2/5));   }
+  .d--3-5,
+  .d--6-10  { width: calc(100% * (3/5));   }
+  .d--4-5,
+  .d--8-10  { width: calc(100% * (4/5));   }
+  .d--1-6,
+  .d--2-12  { width: calc(100% * (1/6));   }
+  .d--5-6,
+  .d--10-12 { width: calc(100% * (5/6));   }
+  .d--1-7   { width: calc(100% * (1/7));   }
+  .d--2-7   { width: calc(100% * (2/7));   }
+  .d--3-7   { width: calc(100% * (3/7));   }
+  .d--4-7   { width: calc(100% * (4/7));   }
+  .d--5-7   { width: calc(100% * (5/7));   }
+  .d--6-7   { width: calc(100% * (6/7));   }
+  .d--1-8   { width: calc(100% * (1/8));   }
+  .d--3-8   { width: calc(100% * (3/8));   }
+  .d--5-8   { width: calc(100% * (5/8));   }
+  .d--7-8   { width: calc(100% * (7/8));   }
+  .d--1-9   { width: calc(100% * (1/9));   }
+  .d--2-9   { width: calc(100% * (2/9));   }
+  .d--4-9   { width: calc(100% * (4/9));   }
+  .d--5-9   { width: calc(100% * (5/9));   }
+  .d--7-9   { width: calc(100% * (7/9));   }
+  .d--8-9   { width: calc(100% * (8/9));   }
+  .d--1-10  { width: calc(100% * (1/10));  }
+  .d--3-10  { width: calc(100% * (3/10));  }
+  .d--7-10  { width: calc(100% * (7/10));  }
+  .d--9-10  { width: calc(100% * (9/10));  }
+  .d--1-11  { width: calc(100% * (1/11));  }
+  .d--2-11  { width: calc(100% * (2/11));  }
+  .d--3-11  { width: calc(100% * (3/11));  }
+  .d--4-11  { width: calc(100% * (4/11));  }
+  .d--5-11  { width: calc(100% * (5/11));  }
+  .d--6-11  { width: calc(100% * (6/11));  }
+  .d--7-11  { width: calc(100% * (7/11));  }
+  .d--8-11  { width: calc(100% * (8/11));  }
+  .d--9-11  { width: calc(100% * (9/11));  }
+  .d--10-11 { width: calc(100% * (10/11)); }
+  .d--1-12  { width: calc(100% * (1/12));  }
+  .d--5-12  { width: calc(100% * (5/12));  }
+  .d--7-12  { width: calc(100% * (7/12));  }
+  .d--11-12 { width: calc(100% * (11/12)); }
+}
+
+.row.table{
+	float:left;
+}
+.row.table.two-line .col{
+	padding: 4.63em 0;
+}
+
+/**********
+	* utility module
+**********/
+.m-hidden{display: none;}
+@media only screen and (max-width : 768px){
+	.t-hidden{ display: none; }
+}
+@media only screen and (max-width : 1000px){
+	.d-hidden{ display: none; }
+}
+
+
+/*소녀는 공부한다.
+하염없이 펜을, 종이를 만지작 거린다.
+말대신 펜을 휘갈기니 목이 쉬고,
+살을 맞대어야 할 손엔 펜을 쥐니 굳은살이 배긴다.*/

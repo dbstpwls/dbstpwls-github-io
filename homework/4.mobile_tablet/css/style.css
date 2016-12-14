@@ -1,0 +1,81 @@
+body, div, p{
+	padding: 0;
+	margin: 0;
+}
+html{
+	font-size: 20px;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	height: 100vh;
+	position: relative;
+}
+.container::before{
+	content: "";
+	display:block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(90deg, blue 0, blue 50%, red 50%, red 100%);
+	background-size: 16.6666666667% 1px;
+	opacity: 0.2;
+}
+
+[class ^= col]{
+	background: tomato;
+	box-sizing: border-box;
+	border: 1px solid black;
+	font-size: 4rem;
+	text-align: center;
+	float:left;
+}
+[class ^= col] span{
+	display: block;
+	padding: 1em 0;
+}
+
+.col.cling{
+	width: 25%;
+}
+
+.row{
+	margin-bottom: 20px;
+}
+.row::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+[class *=  one-of-]{
+	width: 50%;
+	height: 300px;
+}
+
+
+@media screen and (max-width : 1000px){
+	html{
+		font-size: 15px;
+	}
+	.container::before{
+		background-size: 25%;
+	}
+	.col.cling{
+		width: 50%;
+	}
+}
+@media screen and (max-width : 500px){
+	html{
+		font-size: 10px;
+	}
+	.container::before{
+		background-size: 50%;
+	}
+	.col.cling{
+		width: 100%;
+	}
+}

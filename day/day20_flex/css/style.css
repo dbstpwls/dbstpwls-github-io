@@ -1,0 +1,46 @@
+body, div{
+	padding: 0;
+	margin: 0;
+}
+.flex-container{
+	/* display, flex-direction, flex-wrap */
+	border: 3px solid blue;
+	display: flex; /* flex, inline-flex */
+	width: 300px;
+	height: 500px;
+	/*flex-direction: row-reverse;  row, column || + reverse */
+	/*flex-wrap: wrap-reverse;  nowrap, wrap, wrap-reverse */
+	flex-flow : row wrap;  /* [dircetion, wrap] */
+}
+.flex-container div{
+	/* order, flex && => grow, shirink, basis, justify-items, align-items */
+	/*basis : auto [default];*/
+	/* order = > 음수로 설정 가능, z-index 같은 기능 */
+	/* flex: [grow, shirink, basis];, flex: 0 1 auto; [default value] */
+	/* 1번에 grow: 1; 2번에 grow: 2; 주면 2번은 남은공간 2배할당 */
+	/* jusity-items : space-around, space-bettwen, flex-start, flex-end, center*/
+	/* align-items : base-line ,stretch ,flex-start, flex-end ,flex-start, flex-end, center */
+	/* align-items 의 개별적 배치 => align-self */
+	box-sizing: border-box;
+	border: 1px solid #fe4940;
+	background: #000;
+	width: 100px;
+	height: 100px;
+}
+.font-style>div{
+	color: white;
+	text-align:center;
+	line-height: 100px;
+	font-size: 3rem;
+}
+
+
+
+/* width setting*/
+
+
+/*site*/
+flex-bility,
+flex-solve,
+codepen flex,
+w3c flex

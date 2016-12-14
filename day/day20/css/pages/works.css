@@ -1,0 +1,60 @@
+/*reset*/
+h1,h2,h3,h4,h5, span, ul, li{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+/*End reset*/
+
+.page-header{
+	height: 800px;
+	background: powderblue;
+}
+.s--1-2{
+	height: 375px;
+}
+.h-2x{
+	height: 750px;
+}
+
+.bi-1{
+	height: 50%;
+	background: #b6811c;
+}
+.bi-2{
+	height: 50%;
+	background: #ddd;
+}
+.package-1{
+	background: #000;
+	color:white;
+}
+
+.notice ul{
+	height: inherit;
+}
+.notice li{
+	list-style: none;
+	display: block;
+	height: inherit;
+}
+.notice .title{
+	background: yellow;
+}
+.notice .content{
+	background: red;
+}
+.news{
+	height: 345px;
+	background: powderblue;
+}
+.twitter{
+	height: 459px;
+	background: tomato;
+}
+.footer{
+	height: 487px;
+	background: #ffa6a6;
+}
