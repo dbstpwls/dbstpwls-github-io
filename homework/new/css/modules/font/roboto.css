@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'roboto';
+  src: url("../font/Roboto/Roboto-Regular.ttf"), sans-serif;
+  font-weight: normal; }
+
+body {
+  font-family: 'roboto'; }
+
+/*# sourceMappingURL=../../map/modules/font/roboto.css.map */

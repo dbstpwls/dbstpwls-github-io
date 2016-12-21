@@ -1,0 +1,24 @@
+.trans {
+  transition: all 0.4s; }
+
+.fix {
+  position: fixed; }
+
+header {
+  line-height: 1.5rem;
+  color: white; }
+  header strong {
+    float: left;
+    font-weight: 300;
+    margin-left: 0.25rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    padding: 0 0.5rem;
+    background: #81A9DB; }
+  header .title {
+    font-size: 1rem;
+    line-height: inherit;
+    text-transform: uppercase;
+    background: #333333; }
+
+/*# sourceMappingURL=../../map/modules/_layout/nav.css.map */

@@ -1,0 +1,17 @@
+.tc {
+  text-align: center; }
+
+.vc {
+  margin-top: 50%;
+  transform: translateY(-50%); }
+
+.pos-vc {
+  top: 50%;
+  transform: translateY(-50%); }
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/*# sourceMappingURL=../map/modules/default_class.css.map */
