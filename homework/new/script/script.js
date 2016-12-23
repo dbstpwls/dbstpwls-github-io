@@ -1,24 +1,42 @@
 $(function () {
 	var $nav = $('header>nav'),
-		$itemsC = $nav.children('ul'),
-		$items = $itemsC.children('li'),
-		$title = $('main>section>h1.title');
+		$itemsC = $('header>nav>.scroll>ul'),
+		$li = $itemsC.children('li')
+		$items = $li.children('button'),
+		$section = $('main>section');
 
 	var $menuBT = $('button.toggle-menu');
 
 	// ==============================
+	// list 개수 찾기
+	// ==============================
+	var $titleWrap = $('header>nav>.scroll>.title-wrap');
+	// ==============================
+	// list 개수 찾기 END
+	// ==============================
+
+	// ==============================
 	// nav 애니매이션
 	// ==============================
+	var $main = $('body>main');
 	function navToggle() {
 		$nav.toggleClass('on');
 	}
+	function sectionToggle(className) {
+		if(className == "All"){
+			$section.fadeIn('fast');
+		}else {
+			$section.fadeOut('fast');
+			$main.children('.'+className).fadeIn('fast');
+		}
+	}
 	$items.click(function () {
 		var $this = $(this);
-		var text = $this.text();
-		$title.text(text);
+		var text = $this.text().trim();
 		$items.removeClass('on');
 		$this.addClass('on');
 		navToggle();
+		sectionToggle(text);
 	});
 	$menuBT.click(function () {
 		navToggle();
@@ -30,18 +48,7 @@ $(function () {
 	// ==============================
 	// scroll animtaion
 	// ==============================
-	var prevScroll = $(document).scrollTop();
-	$(document).mousemove(function () {
-		prevScroll = $(document).scrollTop();
-	});
-	$(document).scroll(function () {
-		var $this = $(this),
-			scrollTop = $this.scrollTop();
-			console.log(scrollTop);
-		if (prevScroll < scrollTop) {
-			console.log('down');
-		}else{
-			console.log('up');
-		}
-	});
+	// ==============================
+	// scroll animation END
+	// ==============================
 });
