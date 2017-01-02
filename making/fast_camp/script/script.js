@@ -7,7 +7,8 @@ $(function () {
 		$main = $('body>main'),
 		$section = $main.children('section'),
 		$section_day = $main.children('section[class *= day]'),
-		$section_work = $main.children('section[class *= work]');
+		$section_work = $main.children('section[class *= work]'),
+		$reference = $('main>section.work-grid-system>article.reference>button.reference-button');
 
 	var $menuBT = $('button.toggle-menu');
 
@@ -61,6 +62,10 @@ $(function () {
 	// 배경 clikc할때
 	$('main').click(function () {
 		navRemove();
+	});
+	$reference.click(function () {
+		$main.children('.work-about-font').fadeIn('fast');
+		$main.children('.day3').fadeIn('fast');
 	});
 	// ==============================
 	// nav 애니매이션 END
