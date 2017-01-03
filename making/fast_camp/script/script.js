@@ -8,6 +8,7 @@ $(function () {
 		$section = $main.children('section'),
 		$section_day = $main.children('section[class *= day]'),
 		$section_work = $main.children('section[class *= work]'),
+		$section_typo = $main.children('section[class = typography]'),
 		$reference = $('main>section.work-grid-system>article.reference>button.reference-button');
 
 	var $menuBT = $('button.toggle-menu');
@@ -29,9 +30,11 @@ $(function () {
 	function sectionToggle(className) {
 		if(className == "all-day"){
 			$section_work.fadeOut('fast');
+			$section_typo.fadeOut('fast');
 			$section_day.fadeIn('fast');
 		}else if(className == "all-work"){
 			$section_day.fadeOut('fast');
+			$section_typo.fadeOut('fast');
 			$section_work.fadeIn('fast');
 		}else{
 			$section.fadeOut('fast');
