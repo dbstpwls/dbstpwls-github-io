@@ -1,0 +1,54 @@
+// ====================================================
+// DEFAULT START
+// ====================================================
+// variables ( MANAGEMENT MODULES, README.md )
+@import 'modules/default/variables'
+// finction
+@import 'modules/default/func'
+// mix-in
+@import 'modules/default/mix'
+// 공용 사용 class
+@import 'modules/default/default_class'
+// font-face
+@import 'modules/default/font-face'
+// reset
+@import 'modules/default/reset'
+// ====================================================
+// DEFAULT END
+// ====================================================
+
+// TYPOGRAPY
+@import 'modules/typography'
+// COLOR ( README.md )
+@import 'modules/color'
+// GRID ( CAN'T USE `JUST FOR SEE` )
+@import 'modules/ui_grid'
+// RESPONSE MODULE ( README.md )
+@import 'modules/response_modules'
+// XEICON
+@import 'modules/xeicon'
+
+// DISPLAY LAYOUT
+@import 'modules/layout'
+
+// UI MODULES
+@import 'modules/module'
+
+// ============================================
+// to-see
+@include scrollHidden(grid-info, scroller, 320px)
+@include scrollHidden(input-wrap, scroller, 750px)
+@include scrollHidden(question-wrapper, scroller, 500px)
+@include scrollHidden(tab-wrap, scroller, 500px)
+
+@import "./modules/layout_media"
+
+
+// -============ 추가 예정 ==========
+// 1. scirpt ( scroll event, 누르면 스타일이 나오게 )
+.av
+	// 소수점 나올시 margin으로 밀어주는걸로 하지만 주의할 점은 background-position이 margin도 인식해서 아래로 치우쳐져 보이는 현상을 발생한 적이 있었다. 즉 margin, padding을 줄경우 이 역시 양분해서 줘야함
+	// => 소수점이 나올경우 => margin or padding 으로 양보
+	//
+	// 짝수 - 홀수 = 홀수, 홀수 - 짝수 = 홀수
+	@include lineCenter(71, 15)

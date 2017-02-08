@@ -1,0 +1,752 @@
+// color Pattle
+@include initColor($magenta, true, 2)
+@include initColor($blue, true, 2)
+@include initColor($mint, true, 2)
+@include initColor($yellow, true, 2)
+@include initColor($red, true, 2)
+@include initColor($gray, true, 2)
+@include initColor($basic,false)
+@include initColor($span,false)
+@include initColor($point,false)
+@include initColor($link,false)
+@include initColor($bt4,false)
+
+.color-palette
+	article
+		padding: 11px
+		padding-bottom: 40px
+		float: left
+		position: relative
+		margin-right: 30px
+		color: white
+		&.mr-n
+			margin-right: 0
+		&>div
+			float: none
+			width: auto
+			&:nth-child(2)
+				padding: 0
+				background: none
+				border: 0 none
+		h4
+			font-size: 14px
+			position: absolute
+			line-height: 40px
+			bottom: 0
+			color: #a7acc1
+			text-transform: uppercase
+		.wrap
+			border-radius: 5px
+			overflow: hidden
+			div
+				width: 125px
+				float: left
+				height: 83px
+				line-height: 83px
+				text-align: center
+				color: white
+			.deep-ft-color
+				color: #999999
+
+// grid container
+.grid
+	.grid-info
+		&>div
+			float: none
+			width: auto
+	.grid-container
+		line-height: 110px
+
+// pagination
+.nav1
+	background: #42a8ff
+	min-width: 98px
+	padding: 0 24px
+	height: 40px
+	line-height: 37px
+	border-radius: 5px
+	text-align: center
+	float: left
+	margin-right: 123px
+	margin-bottom: 20px
+	button
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		border: 2px solid white
+		margin: 0 6px
+		&.on
+			background: white
+.nav2
+	position: relative
+	float: left
+	button
+		color: #555765
+		background: white
+		width: 100%
+		height: 100%
+		&[class ^= go]
+			float: left
+			box-sizing: border-box
+			border: 1px solid #dadde5
+			width: 40px
+			height: 40px
+			position: absolute
+			font-size: 20px
+		&.go-first
+			left: 0
+			border-radius: 5px 0 0 5px
+		&.go-last
+			right: 0
+			border-radius: 0 5px 5px 0
+	ol
+		float: left
+		width: 400px
+		padding: 0 40px
+		height: 40px
+		overflow: hidden
+		li
+			float: left
+			display: block
+			box-sizing: border-box
+			border-right: 1px solid #dadde5
+			border-top: 1px solid #dadde5
+			border-bottom: 1px solid #dadde5
+			width: 40px
+			height: 40px
+			&::after
+				content: ''
+				display: block
+				clear: both
+			&:last-child
+				border-right: 0 none
+			&.on
+				border: 0 none
+				button
+					background: #42a8ff
+					color: white
+// * nav 줄이기 예제 *
+@media screen and ( max-width : 1150px )
+	.nav2
+		ol
+			// width*length ( 40 * 3 )
+			width: 120px
+		button.go-last
+			right: 1px
+
+// button
+.button-ex-wrap-60
+	button
+		border-radius: 30px
+		min-width: 240px
+		padding: 0 50px
+		height: 60px
+		font-size: 20px
+		font-weight: bold
+.button-ex-wrap-40
+	button
+		border-radius: 20px
+		padding: 0 20px
+		min-width: 115px
+		height: 40px
+		font-size: 15px
+		font-weight: bold
+.button-ex-wrap-30
+	button
+		border-radius: 15px
+		padding: 0 20px
+		min-width: 105px
+		height: 30px
+		font-size: 13px
+		font-weight: normal
+// icon
+.icon-wrap
+	div
+		font-size: 18px
+		color: white
+		width: 30px
+		height: 30px
+		text-align: center
+		line-height: 30px
+		border-radius: 15px
+		&.twitter-bg
+			background: #55acef
+		&.facebook-bg
+			background: #375591
+		&.kakaostory-bg
+			background: #ffcd00
+		&.google-plus-bg
+			background: #dc493c
+		&.naver-bg
+			background: #1dc800
+		span
+			margin-top: 5px
+			margin-left: 2px
+// input group
+.input-group
+	&.type-1
+		input
+			box-sizing: border-box
+			max-width: 600px
+			width: 100%
+			height: 40px
+			border-radius: 20px
+			padding: 0 30px
+			font-size: 14px
+			border-width: 1px
+			border-style: solid
+			&.normal
+				border: 1px solid #eceff9
+				background: #f4f7fc
+				color: map-get($gray, 4)
+			&.focus, &:focus
+				border-color: map-get($gray, 4)
+				color: map-get($basic, 1)
+				background: #f4f7fc
+			&.complete
+				background: none
+				border-color: map-get($mint, 2)
+				color: map-get($mint, 2)
+			&.disable
+				background: #e8ebf2
+				color: #999999
+	.error-box
+		max-width: 600px
+		width: 100%
+		height: 40px
+		position: relative
+		input
+			color: map-get($gray, 4)
+			border: 1px solid #de4040
+			background: #f4f7fc
+		.error-message
+			font-size: 14px
+			color: #de4040
+			position: absolute
+			right: 22px
+			top: 50%
+			transform : translateY(-50%)
+	&.type-2
+		input, .select-box
+			box-sizing: border-box
+			max-width: 600px
+			width: 100%
+			height: 40px
+			border-radius: 5px
+			padding: 0 30px
+			font-size: 14px
+			border-width: 1px
+			border-style: solid
+			border-color: #c0c5d9
+			&.normal
+				color: map-get($gray, 4)
+				border-color: map-get($gray, 4)
+			&.focus
+				color: map-get($basic, 1)
+			&.disable
+				color: #999
+				background: #f5f7fa
+		.select-box
+			position: relative
+			button
+				color: #333333
+				position: absolute
+				right: 0
+				width: 50px
+				height: 40px
+			p
+				float: left
+				line-height: 40px
+				font-size: inherit
+			&.focus
+				color: map-get($basic, 1)
+				button
+					color: #42a8ff
+.radio-group
+	div
+		box-sizing: border-box
+		width: 18px
+		height: 18px
+		border-radius: 50%
+		position: relative
+		span
+			position: absolute
+			display: block
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			top: 3px
+			left: 3px
+	.type-1
+		div
+			border: 2px solid #e1e3e6
+			&.on
+				span
+					background: #de40be
+	.type-2
+		div
+			border: 2px solid #e1e3e6
+			background: #e8ebf2
+			&.on
+				span
+					background: #afb2c0
+.checkbox-group
+	div
+		box-sizing: border-box
+		width: 20px
+		height: 20px
+		border-radius: 5px
+		position: relative
+		background: #eceff9
+		span
+			width: 20px
+			height: 20px
+			background: url('../images/check.svg') no-repeat
+			background-position: center center
+		&.on
+			background: #de40be
+
+// profile
+.profile-wrap
+	.large-profile
+		width: 100px
+		height: 100px
+		border-radius: 50%
+		background: url('../images/large_profile.png')
+		background-position-x: center
+	.medium-profile
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		background: url('../images/medium_profile.png')
+		background-position-x: center
+	.small-profile
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background: url('../images/small_profile.png')
+		background-position-x: center
+		background-position-y: -10px
+
+// Q&A
+.question-wrapper
+	.q-a-wrap
+		width: 930px
+		line-height: 58px
+		border: 1px solid #eceff9
+		border-radius: 5px
+		font-size: 16px
+		color: #4e4e4e
+		&::after
+			content: ''
+			display: block
+			clear: both
+		.q-a
+			width: 49px
+			text-align: right
+			margin-right: 25px
+			font-size: 22px
+			font-family: 'open sans'
+			font-weight: bold
+			float: left
+			line-height: 58px
+			&.q
+				color: #df40be
+			&.a
+				color: #c0c5d9
+		.content
+			float: left
+			font-size: 16px
+			line-height: 24px
+			padding-top: 19px
+		.open-bt
+			font-size: 22px
+			height: 60px
+			float: right
+			padding: 0 29px
+			color: #282828
+		&.answer
+			margin-top: 20px
+			.content
+				margin-bottom: 82px
+			.text-box
+				&::after
+					content: ''
+					display: block
+					clear: both
+			ul
+				background: #f5f7fa
+				color: #494d66
+				li
+					margin: 0 44px
+					padding: 18px 0
+					padding-top: 19px
+					border-top: 1px solid #c0c5d9
+					font-size: 13px
+					line-height: 21px
+					&::after
+						content: ''
+						display: block
+						clear: both
+					&:first-child
+						border: 0 none
+					.emphasis
+						font-size: 15px
+						font-weight: bold
+					.text-box
+						float: left
+						line-height: 42px
+						&.more-line
+							line-height: 21px
+					.bt
+						margin-top: 1px
+						font-size: 12px
+						width: 165px
+						background: #df40be
+						height: 40px
+						color: #fff
+						float: right
+						border-radius: 25px
+						&.wrap
+							background: #c0c5d9
+							button
+								float: left
+								color: #fff
+								font-size: 12px
+								height: 40px
+								width: 50%
+								box-sizing: border-box
+								position: relative
+								&:first-child
+									&::after
+										content: ''
+										display: block
+										width: 1px
+										height: 11px
+										background: #aeb4cb
+										position: absolute
+										right: 1px
+										top: 50%
+										transform: translateY(-50%)
+
+// TAB
+.tab-wrap
+	.menu
+		box-sizing: border-box
+		padding: 0 50px
+		position: relative
+		border: 1px solid #c0c5d9
+		border-radius: 5px
+		line-height: 38px
+		&>button
+			position: absolute
+			width: 50px
+			height: 40px
+			background: #c724a6
+			color: #fff
+			font-size: 20px
+			top: -1px
+			z-index: 10
+			&.right
+				border-radius: 0 5px 5px 0
+				right: -1px
+			&.left
+				border-radius: 5px 0 0 5px
+				left: -1px
+		.see
+			width: 100%
+			overflow: hidden
+		ul
+			width: 1327px
+			margin: 0 auto
+			@extend %clear
+			li
+				width: 6.6666666667%
+				white-space: nowrap
+				float: left
+				font-size: 16px
+				height: 38px
+				button
+					height: 38px
+					width: 100%
+	.tab
+		button
+			color: #3c3d41
+			width: 254px
+			height: 40px
+			border: 1px solid #c0c5d9
+			box-sizing: border-box
+			&:first-child
+				border-right: 0 none
+				border-radius: 5px 0 0 5px
+			&:last-child
+				border-left: 0 none
+				border-radius: 0 5px 5px 0
+			&.on
+				border-color: #c724a6
+				background: #c724a6
+				color: #fff
+	.tab-menu
+		border-radius: 5px 5px 0 0
+		border: 1px solid #eaeaea
+		border-bottom: 3px solid #de40be
+		@extend %clear
+		li
+			float: left
+			margin-top: 13px
+			margin-bottom: 10px
+			&:first-child
+				margin-left: 29px
+			&.on
+				button
+					background: #c724a6
+					color: #fff
+			button
+				padding: 0 22px
+				border-radius: 25px
+				line-height: 43px
+	.tab-category
+		@extend %clear
+		font-size: 13px
+		display: table
+		margin-right: auto
+		margin-left: auto
+		li
+			float: left
+			margin-left: 10px
+			&:first-child
+				margin-left: 0
+			&.on
+				button
+					background: #42a7ff
+					color: #fff
+				span
+					font-weight: bold
+			button
+				box-sizing: border-box
+				color: #4e4e4e
+				border: 1px solid #eceff9
+				width: 178px
+				height: 40px
+				border-radius: 5px
+// label
+.label-wrap
+	.label-choose
+		width: 71px
+		line-height: 30px
+		font-size: 16px
+		text-align: center
+		color: #fff
+		background: url($img + 'choose-bg.svg') no-repeat
+		background-size: cover
+	.label-animal
+		width: 55px
+		line-height: 28px
+		border-radius: 15px
+		border: 2px solid #1dabb5
+		box-sizing: border-box
+		font-size: 14px
+		text-align: center
+		color: #1dabb5
+	.label-best
+		font-weight: bold
+		line-height: 30px
+		font-size: 20px
+		color: #ffd026
+		[class ^= xi]
+			font-size: 24px
+			position: relative
+			top: 2px
+	.label-new
+		width: 39px
+		line-height: 24px
+		background: #00a1ad
+		border-radius: 2px
+		font-size: 12px
+		text-align: center
+		color: #fff
+	.label-publish
+		width: 50px
+		line-height: 24px
+		border-radius: 2px
+		font-size: 13px
+		text-align: center
+		color: #fff
+		background: #ffd026
+	.label-episode
+		width: 50px
+		line-height: 24px
+		border-radius: 2px
+		font-size: 13px
+		text-align: center
+		color: #fff
+		background: #ffd026
+	.label-definite
+		width: 50px
+		line-height: 24px
+		border-radius: 2px
+		font-size: 13px
+		text-align: center
+		color: #fff
+		background: #a7acc1
+	.label-progress
+		width: 50px
+		line-height: 15px
+		padding-top: 1px
+		font-size: 12px
+		text-align: center
+		color: #42a8ff
+		border: 2px solid #42a8ff
+		border-radius: 15px
+	.label-end
+		width: 50px
+		line-height: 15px
+		padding-top: 1px
+		font-size: 12px
+		text-align: center
+		color: #c0c5d9
+		border: 2px solid #c0c5d9
+		border-radius: 15px
+	.label-erotic
+		width: 27px
+		line-height: 20px
+		background: #ff3346
+		border-radius: 15px
+		text-align: center
+		font-size: 11px
+		color: #fff
+
+// icon
+.icon-w-wrap
+	[class ^= icon-w-]
+		width: 34px
+		height: 34px
+		text-align: center
+		border-style: solid
+		border-width: 2px
+		border-radius: 50%
+		font-size: 24px
+		position: relative
+		line-height: 20px
+		span
+			display: inline
+			padding-bottom: 1px
+			&::after
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				margin: 0 auto
+		&.small
+				width: 22px
+				height: 22px
+				font-size: 14px
+				line-height: 14px
+				span
+					&::after
+						width: 8px
+						height: 1px
+	.icon-w-blue
+		border-color: #3a86fe
+		color: #3a86fe
+		span
+			&::after
+				background: #3a86fe
+	.icon-w-gray
+		border-color: #afb4c7
+		color: #afb4c7
+		span
+			&::after
+				background: #afb4c7
+	.icon-w-white
+		border-color: #fff
+		color: #fff
+		span
+			&::after
+				background: #fff
+.icon-content-wrap
+	[class ^= content-icon]
+		display: block
+		background-size: cover
+	.icon-content-video
+		width: 62px
+		height: 43px
+		background: url($img + 'video.svg') no-repeat
+	.icon-content-q-video
+		width: 62px
+		height: 43px
+		background: url($img + 'q-video.svg') no-repeat
+	.icon-content-webtoon
+		width: 62px
+		height: 43px
+		background: url($img + 'webtoon.svg') no-repeat
+	.icon-content-intelegent
+		width: 57px
+		height: 43px
+		background: url($img + 'intelegent.svg') no-repeat
+	.icon-content-text-base
+		box-sizing: border-box
+		text-align: center
+		border: 4px solid #000
+		border-radius: 5px
+		span
+			display: inline
+			font-weight: bold
+			border-bottom: 4px solid black
+		&.channel
+			width: 62px
+			height: 43px
+			span
+				font-size: 26px
+				line-height: 28px
+.xeicon-wrap
+	span
+		font-size: 30px
+.icon-shape-wrap
+		[class ^= icon-shape-]
+			display: block
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+		.icon-shape-loding
+			width: 60px
+			height: 60px
+			background-image: url($img+'loading.svg')
+		.icon-shape-img
+			width: 38px
+			height: 32px
+			background-image: url($img+'img.svg')
+		.icon-shape-microphone
+			width: 25px
+			height: 25px
+			background-image: url($img+'microphone.svg')
+		.icon-shape-re
+			width: 19px
+			height: 21px
+			background-image: url($img+'re.svg')
+		.icon-shape-emoticon-heart
+			width: 26px
+			height: 25px
+			background-image: url($img+'emoticon-heart@2x.png')
+		.icon-shape-notify
+			$width : 17px
+			$height: 18px
+			width: $width
+			height: $height
+			background-image: url($img+'notify@2x.png')
+			&:hover
+				background-image: url($img+'notify-hover@2x.png')
+				background-size: ($width - 2px) ($height - 5px)
+				background-position-y: bottom
+		.icon-shape-notify-hover
+			$width : 17px
+			$height : 18px
+			width: $height
+			height: $width
+			background-image: url($img+'notify-hover@2x.png')
+			background-size: ($width - 2px) ($height - 5px)
+			background-position-y: bottom
+		.icon-shape-play
+			width: 10px
+			height: 13px
+			background-image: url($img+'play.svg')

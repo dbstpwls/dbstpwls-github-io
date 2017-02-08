@@ -1,0 +1,37 @@
+@mixin initFont($sz, $line-height)
+	font-size: $sz*1px
+	line-height: $line-height*1px
+
+@mixin scrollHidden($parent ,$child, $height, $width : initial)
+	.#{$parent}
+		height: $height
+		overflow: hidden
+		.#{$child}
+			overflow-x: auto
+			width: 100%
+			height: $height + 100px
+
+@mixin lineCenter($whole-height, $line-height, $p-error : 2)
+	$p : $p-error/2
+	$ct : ($whole-height - $line-height)
+	// 소수점 나올경우 대처
+	@if($ct % 2 != 0)
+		$height : $whole-height - $line-height - 1
+		$pt : $height/2 + $p + 1
+		$pb : $height/2 - $p
+		line-height : $line-height*1px
+		padding-top: $pt*1px
+		padding-bottom: $pb*1px
+	@else
+		$padding: $ct/2
+		$pt : $padding + $p
+		$pb : $padding - $p
+		line-height : $line-height*1px
+		padding-top: $pt*1px
+		padding-bottom: $pb*1px
+
+%clear
+	&::after
+		content: ''
+		display: block
+		clear: both

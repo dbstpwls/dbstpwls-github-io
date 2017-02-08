@@ -1,0 +1,47 @@
+@mixin initColor($map, $ct : true, $border: 1)
+	$leng : length($map) - 1
+	$class : map-get($map, className)
+	[class ^= #{$class}-]
+		box-sizing: border-box
+	@if ($ct == true)
+		@for $i from 1 through $leng
+			$color : map-get($map, $i)
+			.#{$class}-#{$i}
+				background: $color
+				color: $color
+				&::after
+					content : $color+''
+				&.round
+					background: none
+					border-width: $border*1px
+					border-style: solid
+					border-color: $color
+					color: $color
+			.#{$class}-#{$i}-c
+				color: $color
+			.#{$class}-#{$i}-bg
+				background: $color
+			.#{$class}-#{$i}-br
+				border-style: solid
+				border-width: $border*1px
+				border-color: $color
+	@else
+		@for $i from 1 through $leng
+			$color : map-get($map, $i)
+			.#{$class}-#{$i}
+				background: $color
+				color: $color
+				&.round
+					background: none
+					border-width: $border*1px
+					border-style: solid
+					border-color: $color
+					color: $color
+			.#{$class}-#{$i}-c
+				color: $color
+			.#{$class}-#{$i}-bg
+				background: $color
+			.#{$class}-#{$i}-br
+				border-style: solid
+				border-width: $border*1px
+				border-color: $color
