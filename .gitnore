@@ -47,6 +47,7 @@ cache/
 
 # node
 node_modules/
+making/ui-kit/node_modules/
 
 # iconfont
 markup/iconfont/
