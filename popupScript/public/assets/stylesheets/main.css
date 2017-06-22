@@ -1,0 +1,78 @@
+@charset "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, button, p, blockquote, th, td, form, fieldset, blockquote, iframe { margin: 0; padding: 0; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
+
+img { vertical-align: top; border: 0; }
+
+fieldset { border: 0; }
+
+ul, ol, li { list-style: none; }
+
+hr { display: none; }
+
+address { font-style: normal; }
+
+iframe { border: 0; }
+
+body { font-family: "애플 SD 산돌고딕 Neo", "Apple SD Gothic Neo", sans-serif; color: #222; line-height: 1.5; letter-spacing: -0.04em; }
+
+body { padding: 10px; }
+
+section { padding: 10px; border: 1px solid powderblue; }
+
+ul { padding-left: 50px; }
+
+ul.list-no li { list-style: none; }
+
+ul li { list-style: initial; }
+
+h1 { font-size: 14px; }
+
+.progess-wrap { padding-top: 10px; }
+
+.progressbar-wrap { width: 150px; height: 15px; border-radius: 50px; border: 1px solid tomato; overflow: hidden; }
+
+.progressbar-wrap .bar { height: 15px; background: tomato; }
+
+.progress-done { margin-top: 20px; }
+
+.study-list { margin: 20px 0; }
+
+.study-list h2 .desc { font-size: 12px; color: #555; }
+
+.study-list h2 .desc:before { content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 50%; background: tomato; margin: 0 10px; }
+
+.study-list article { margin: 10px 0; border: 1px solid orange; }
+
+.study-list .doing { position: relative; }
+
+.study-list .doing:after { content: ''; display: block; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background: tomato; opacity: 0.4; }
+
+.func { color: white; background: #999; padding: 0 10px; display: block; box-sizing: border-box; }
+
+.done ol { padding-left: 20px; }
+
+.done ol li { list-style-type: decimal; }
+
+#iframeWrap { margin-top: 30px; }
+
+#iframeWrap iframe { width: 45%; max-width: 400px; height: 300px; box-sizing: border-box; margin: 20px 0; float: left; border: 1px solid #000; }
+
+#iframeWrap iframe:nth-child(2n-1) { margin-right: 10%; }
+
+.t-box { display: inline-block; color: white; background: #999; padding: 0 10px; box-sizing: border-box; }
+
+.see-all .spec { border: 0 none; background: powderblue; }
+
+.see-all .spec h1 { font-size: 20px; }
+
+.see-all .spec ul { padding-left: 0; }
+
+.see-all .spec ul li { list-style: none; }
+
+.see-all .progressive { display: block; line-height: 30px; margin-bottom: 25px; border: 1px solid black; font-size: 20px; text-align: center; }
+
+.see-all article { margin: 10px 0; padding: 0 5px; border: 1px solid orange; }
+
+.see-all article h2 { font-size: 20px; border-bottom: 1px solid orange; }
+
+/*# sourceMappingURL=map/main.css.map */

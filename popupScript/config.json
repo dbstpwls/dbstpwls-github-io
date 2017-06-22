@@ -1,0 +1,40 @@
+{
+	"root" : "/Users/yunsejin/Desktop/popupScript",
+	"nas" : "/Users/yunsejin/Desktop/work/publishing/mkPopupTest",
+	"path" : {
+		"src" : "markup",
+		"dist" : "public",
+		"assets" : {
+			"wrap" : "assets",
+			"images" : "images",
+			"script" : "javascripts",
+			"style" : "stylesheets",
+			"font" : "fonts"
+		},
+		"html" : "html"
+	},
+	"func" : {
+		"includePrefix" : "\"@@"
+	},
+	"script" : {
+		"concatFolerJS" : "lib.js",
+		"resultConcat" : false,
+		"resultConcatNaming" : "main.js",
+		"index" : 1,
+		"moveIndex" : 2
+	},
+	"style" : {
+		"defaultNaming" : "main.sass",
+		"sourcemaps" : true,
+		"indentType" : "tab",
+		"precision" : 6,
+		"index" : 2
+	},
+	"images" : {
+		"optimize" : 5,
+		"index" : 2
+	},
+	"html" : {
+		"index" : 2
+	}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>팝업 페이지 진행도</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+</head>
+<body>
+	<h1>진행률</h1>
+	<ul class="list-no link">
+		<li><a href="./index.html">팝업 페이지 한눈에 보기</a></li>
+	</ul>
+	<section class="study-list">
+		<h2>
+			공부계획 list
+			<span class="desc"><= current doing</span>
+		</h2>
+		<article class="doing">
+			<h3>app 설치 유무 (research해야함...)</h3>
+			<ul>
+				<li>판단방법</li>
+			</ul>
+		</article>
+	</section>
+	<section class="done">
+		<h2>파악 완료</h2>
+		<ol>
+			<li>
+				pc, mobile 분리
+				<span class="func">userAgent</span>
+			</li>
+			<li>
+				주소 매칭여부 판단
+				<span class="func">location</span>
+			</li>
+			<li>
+				cookie를 통한 제어
+				<span class="func">cookie 객체, 존재 의의</span>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>현재 목표</h2>
+		<p>app설치 유무 판독 (이것만 하면 끝!)</p>
+		<div class="progess-wrap">
+			<h3>- progress -</h3>
+			<div class="progressbar-wrap">
+				<div class="bar" style="width: 5%"></div>
+			</div>
+		</div>
+		<article class="progress-done">
+			<h2>목표 완료</h2>
+			<p>
+				1.모바일 데스크탑 &#38;&#38; url 분기처리<br/>
+				!!!팝업 페이지 띄우기 (버그가 많음.... ㅠㅠ)!!!
+			</p>
+			<p>
+				iframe 유동적으로 높이 구하고 scrolling 버그 찾아서 고치기
+			</p>
+			<p>
+				cookie 객체를 통해 팝업 control
+			</p>
+		</article>
+	</section>
+</body>
+</html>

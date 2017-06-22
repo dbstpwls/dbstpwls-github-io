@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<title>팝업 페이지 한눈에 보기</title>
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+</head>
+<body class="see-all">
+	<article class="spec">
+		<h1>- 스펙 -</h1>
+		<ul>
+			<li>only javascript</li>
+			<li>safari, chrome, ie9+, firefox 지원</li>
+			<li>변수 네이밍 겹치는 오류 발생하지 않도록 closer 사용하기</li>
+			<li>해당 popup 높이 자동 계산해서 iframe에 반영</li>
+			<li>엄청 자세한 모듈화!</li>
+		</ul>
+	</article>
+	<a href="./all.html" class="progressive">진행도 보기</a>
+	<article class="reason">
+		<h2>변수 설정과 그 이유</h2>
+		<ul id="variables">
+			<li>
+				<p>${urlFilter}</p>
+			</li>
+			<li></li>
+		</ul>
+	</article>
+	<div id="iframeWrap">
+		<iframe src="./wrap/KOREA-!@12.html"></iframe>
+		<iframe src="./wrap/KOREA-12.html"></iframe>
+		<iframe src="./wrap/KOREA-A12.html"></iframe>
+		<iframe src="./wrap/KOREA.html"></iframe>
+		<iframe src="./wrap/t1.html"></iframe>
+		<iframe src="./wrap/T2.html"></iframe>
+		<a href="./wrap/KOREA-!@12.html">KOREA-!@12.html</a><br/>
+		<a href="./wrap/KOREA-12.html">KOREA-!@12.html</a><br/>
+		<a href="./wrap/KOREA-A12.html">KOREA-A12.html</a><br/>
+		<a href="./wrap/KOREA.html">KOREA.html</a><br/>
+		<a href="wrap/t1.html">t1.html</a><br/>
+		<a href="wrap/T2.html">T2.html</a>
+	</div>
+</body>
+</html>
