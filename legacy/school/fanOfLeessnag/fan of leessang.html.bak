@@ -1,0 +1,302 @@
+﻿<!doctype html>
+<html lang="kr">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/prefixfree.min.js"></script>
+		<title>리쌍</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<figure>
+			<video autoplay>
+				<source src="video/video1.mp4" type="video/mp4" />
+			</video>
+			</figure>
+			<div class="seevideo" style="top:0;"></div>
+			<div class="seevideo" style="bottom:0;"></div>
+			<header>
+				<nav>
+				<img src="img/logo.png" alt="logo" />
+					<ul>
+						<li>HOME</li>
+						<li>앨범's</li>
+						<li>개리</li>
+						<li>길</li>
+					</ul>
+				</nav>
+				<div class="bt">
+					<img src="img/menubt.png" alt="bt" style="width:100%;height:100%;" />
+				</div>
+			</header>
+			<main>
+				<div class="wrap2">
+				<section class="s1">
+					
+					<h2>home</h2>
+					<article style="position:relative">
+						<h2>article</h2>
+						<img src="img/home.jpg" alt="" />
+						<div class="arrange" style="float:left"><img src="img/gary.jpg" alt="" /></div>
+						<a href="https://twitter.com/kanggary58"><img src="img/twitter.png" alt="" class="t" style="left:200px" /></a>
+						<div class="arrange" style="float:right"><img src="img/gill.jpg" alt="" /></div>
+						<a href="https://twitter.com/gillmeo"><img src="img/twitter.png" alt="" class="t" style="right:200px" /></a>
+						<p>Wellcome To Leessang Company</p>
+					</article>
+				</section>
+				<section class="s2">
+					<h2>section2</h2>
+					<article class="album">
+					<h2>album</h2>
+					</article>
+					<div class="a1">
+						<article><img src="img/a/1.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍1집 ]</h3>
+							<strong>"거친 세상의 풍파 속에서 견디며 살아가는 사람들이여 당신들의 모습은 진정 아름다워"</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. intro</p>
+							<p>2. 출사표 (Fea. Bobby For Buga Kings, 디기리 For Honey Family)</p>
+							<p>3. 조까라마이싱</p>
+							<p>4. Yes Ok (Fea. Double K)</p>
+							<p>5. Rush (Fea. 정인)</p>
+							<p>6. 7477(My Frenz) (Fea. Druken Tiger)</p>
+							<p>7. 컨디션 (Fea. Double K)</p>
+							<p>8. 인생은 아름다워 (Fea. 박선주)</p>
+							<p>9. 대한늬우스 (Fea. Sean 2 Slow)</p>
+							<p>10. E-he-ra (Fea. Bullbe Sisters)</p>
+							<p>11. Street 노가리 (Fea. 은준)</p>
+							<p>12. Luv (Real Story) (Fea. 박선주 Sunny For Honey Family)</p>
+							<p>13. 으라챠챠-Wake Up (Fea. CB Mass)</p>
+							<p>14. 빚좋은 개살구2 (Fea. 교주박 & 디기리 For Honey Family)</p>
+							<p>15. Wamming Up (Fea. J.U. (최선생) For 가리온)</p>
+							<p>16. 끝으로 (Fea. 박화요비)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a3">
+						<article><img src="img/a/2.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍2집 ]</h3>
+							<strong>"그때 난 참 바보 같았지"</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. Street 노가리 II (Feat. 은준)</p>
+							<p>2. Fly High (Feat. 정인, 하림)</p>
+							<p>3. SPAIN (Feat. 성훈 from Brwon Eyed Soul)</p>
+							<p>4. Slow Down (Feat. 김범수)</p>
+							<p>5. 리쌍 부르쓰 [Interlude]</p>
+							<p>6. 리쌍 부르쓰 (Feat. 정인)</p>
+							<p>7. 건-Life (Feat. NaNa)</p>
+							<p>8. 꼬리아 (Feat. 이윤정)</p>
+							<p>9. 알콜man</p>
+							<p>10. 831.</p>
+							<p>11. Still (Feat. 정인)</p>
+							<p>12. 아름다운 추억</p>
+							<p>13. 인생은 아름다워 [Big Mama King Version] (Feat. Big MaMa King)</p>
+							<p>14. x2 (Feat. Double K)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a5">
+						<article><img src="img/a/3.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍3집 ]</h3>
+							<strong>"복잡한 문제의 답은 때론 단순한 것"</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. intro</p>
+							<p>2. 내가 웃는 게 아니야 (Feat. ALI)</p>
+							<p>3. 도시 싸이클 (Feat. 예은)</p>
+							<p>4. 광대 (Feat. BMK)</p>
+							<p>5. 개리와 기리 (simple life) (옛 version)</p>
+							<p>6. JJJ (Feat. 정표)</p>
+							<p>7. 화가 (Feat. Tiger JK, Sean2Slow, Dynamic Duo)</p>
+							<p>8. 의정부 Song (Feat. T)</p>
+							<p>9. Skit (야바위)</p>
+							<p>10. 야바위 (Feat. TBNY)</p>
+							<p>11. 청춘 30 (Feat. Bobby Kim)</p>
+							<p>12. Never Never Say Good-bye (Feat. ALI)</p>
+							<p>13. Outsider (Feat. Double K)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a7">
+						<article><img src="img/a/4.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍4집 ]</h3>
+							<strong>"사람이 사람답게 살고싶어도 내 주위에 쳐있는 울타릴 벗어날수 없어 "</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. 007 (Feat. ALI)</p>
+							<p>2. Ballerino (Feat. ALI)</p>
+							<p>3. 영화처럼 (Feat. ALI)</p>
+							<p>4. 강변살자 Skit</p>
+							<p>5. 부자 (Project)</p>
+							<p>6. Sunshine</p>
+							<p>7. 살아야 한다면 (Feat. ALI)</p>
+							<p>8. Vagabond LeeSSang</p>
+							<p>9. Dead Phone (Intro)</p>
+							<p>10. Dead Phone (Feat. rado, ALI)</p>
+							<p>11. 투혼 (Feat. sean2slow, 다이나믹 듀오, Double K)</p>
+							<p>12. 누군가를 위한 삶인가 (사생결단 OST) (Feat. 황정민, 류승범)</p>
+							<p>13. 내가 웃는게 아니야 (Remix) (Feat. ALI)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a9">
+						<article><img src="img/a/5.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍5집 ]</h3>
+							<strong>"아름다운 세상을 보여주고 떠난 내 소중한 사람아 이젠 제발 편히 살아 "</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. Intro (Feat. unknownDJs)</p>
+							<p>2. River To Ocean (Feat. The Quiett, 도끼, Rhyme Bus, Bizzy, Maboos)</p>
+							<p>3. Surviver (Feat. Y.D.G(양동근), Leo Kekoa, 디기리, 톱밥, Juvie Train, 넋업샤니)</p>
+							<p>4. In The Beginnig (Feat. Bobby Kim, MC META, sean2slow, 명호, DJ Wreckx )</p>
+							<p>5. 난 말이야... (Feat. Epik High, 현아)</p>
+							<p>6. 역마살 (Feat. 현아)</p>
+							<p>7. 챔피언 (Feat. 정인)</p>
+							<p>8. 사람이어라...</p>
+							<p>9. Street 노가리 3 (Feat. Beat Box By 은준)</p>
+							<p>10. 개리와 기리 2</p>
+							<p>11. 망가져가</p>
+							<p>12. Ballerino Remix (Remix By 범수)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a11">
+						<article><img src="img/a/6.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍6집 ]</h3>
+							<strong>"내 말 한마디 들어줄 사람 이 세상 어디에도 없는 건가 그럼 도대체 나는 뭔가"</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. Intro [hexagonal] (feat. Enzo.b)</p>
+							<p>2. 우리 지금 만나 (feat. 장기하와 얼굴들)</p>
+							<p>3. 헤어지지 못하는 여자, 떠나가지 못하는 남자 (feat. 정인)</p>
+							<p>4. Carousel (feat. 이적)</p>
+							<p>5. 변해가네 (feat. 정인)</p>
+							<p>6. 부서진 동네 (feat. Lucid Fall)</p>
+							<p>7. 일터 (feat. Bizzy)</p>
+							<p>8. Journey (feat. Casker)</p>
+							<p>9. Dying Freedom (feat. 김바다)</p>
+							<p>10. Skit - 벌칙</p>
+							<p>11. 운명 (feat. Malo)</p>
+							<p>12. Canvas (feat. Tiger Jk, Dynamic Duo, Bizzy)</p>
+							<p>13. Run (feat. YB)</p>
+							<p>14. To. Leessang</p>
+							<p>15. Skit - 내 몸은 너를 지웠다</p>
+							<p>16. 내 몸은 너를 지웠다 (feat. Enzo.b)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a13">
+						<article><img src="img/a/7.jpg" alt="" />
+							<h3 style="margin-bottom:10px">[ 리쌍7집 ]</h3>
+							<strong>"사람 땜에 받은 상처 사람으로 다시 메꿔 "</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. 나란 놈은 답은 너다 Prologue</p>
+							<p>2. 나란 놈은 답은 너다 (Feat. 하림)</p>
+							<p>3. TV를 껐네... (Feat. t윤미래, 권정열 of 10cm)</p>
+							<p>4. Serenade (Feat. 개코 of Dynamic Duo, Windy City])</p>
+							<p>5. 회상 (Feat. 백지영)</p>
+							<p>6. 나 그대에게 모두 드리리 (Feat. 정인)</p>
+							<p>7. 죽기 전까지 날아야 하는 새 (To. Bizzy) (Feat. 강산에, Bizzy)</p>
+							<p>8. AsuRa BalBalTa</p>
+							<p>9. 격산타우 (Feat. 국카스텐)</p>
+							<p>10. 강남 사짜 (Feat. PoBi)</p>
+							<p>11. Am I? (Feat. Bizzy, B-Free)</p>
+							<p>12. 독기</p>
+							<p>13. Grand Final (Planet Shiver Mix)</p>
+							<div class="back"><img src="img/back.png" alt="" /></div>
+							</div>
+						</article>
+					</div>
+					<div class="a15">
+						<article><img src="img/a/8.jpg" alt=""/>
+							<h3 style="margin-bottom:10px">[ 리쌍8집 ]</h3>
+							<strong>"세월흘러가며 변해 가는건 어리기 때문이야"</strong><br><br>
+							<div class="list">
+							<strong>-트랙 리스트-</strong>
+							<p style="margin-top:10px;">1. 너에게 배운다 (My Love) (Intro)</p>
+							<p>2. 너에게 배운다 (My Love)</p>
+							<p>3. Someday [피쳐링. 윤도현 of YB]</p>
+							<p>4. 겸손은 힘들어</p>
+							<p>5. HOLA [피쳐링. 정인]</p>
+							<p>6. 행복을 찾아서 인트로</p>
+							<p>7. 행복을 찾아서 [피쳐링. 조현아 of 어반자카파]</p>
+							<p>8. 사람들은 모두 변하나봐 [피쳐링. 정인, 쌈디 of 슈프림팀, 바비킴 of 부가킹즈]</p>
+							<p>9. 별을 따라... (목소리 쥬비)</p>
+							<p>10. Casanova [피쳐링. 쥬비 of 부가킹즈]</p>
+							<p>11. 개리와 기리... 세 번째 이야기</p>
+							<p>12. 울고 싶어라</p>
+							<p>13. Bururi [피쳐링. 정인]</p>
+							<div class="back"><img src="img/back.png" alt=""/></div>
+							</div>
+						</article>
+					</div>		
+				</section>
+				<section class="s3">
+					<h2>section3</h2>
+					<article>
+						<h2>개리소개</h2>
+						<img src="img/gary2.jpg" alt=""/>
+						<strong>"서정적인 가사와 소신있는 삶"</strong>
+						<div class="introduce">
+							<p>개리는 1978년생으로 만 37세다.</p>
+							<p>리쌍 정규앨범을 낼때마다 작사는 거의 다 개리가 했다며 볼수 있을 정도로 작사를 매우 잘하며
+							서정적이고 아름다운 가사 또한 리쌍 팬들 사이에서 유명하다.</p>
+						</div>
+						<ul>
+							<li>강한척 살아가지만 언제나 가슴 한 쪽이 텅빈 나는 사람이어라</li>
+							<li>갑옷처럼 답답한 현실보다 차라리 넓은 창문이 있는 이곳이 좋다.</li>
+							<li>바람같은 짧은 기쁨에 내 외로움 조금 실어 날려보내면 그만인 걸</li>
+						</ul>
+					</article>
+					<div class="drop">
+						<div><p class="solo">SOLO:</p><img src="img/ga.jpg" alt="" /></div>
+					</div>
+				</section>
+				<section class="s4">
+					<h2>section4</h2>
+					<article>
+						<h2>길소개</h2>
+						<img src="img/gill2.jpg" alt=""/>
+						<strong>"서정적인 가사와 소신있는 삶"</strong>
+						<div class="introduce">
+							<p>개리와 같은 1978년생으로 만 37세다.</p>
+							<p>프로듀싱 능력이 뛰어나 평균적으로 앨범 하나 낼때마다 2개정도의 히트곡을 만들어 놓는다</p>
+							<p>개리는 작사 , 랩 길은 프로듀싱 , 훅(HOOK)으로 둘이 찰떡궁합이다.</p>
+							<p>특유의 허스키한 목소리로 인기가 많다.</p>
+						</div>
+						<ul style="margin-top:40px">
+							<li>무거운 삶에 후회는 안 해 괜찮아 그것도 나야</li>
+							<li>눈치도 없이 꽃은 피겠지만 난 여전히 춥고 괴로워</li>
+							<li>세월가면 오질 않을 지금 이 순간을 느끼고 싶어</li>
+						</ul>
+					</article>
+					<div class="drop" style="display:block;">
+						<div><span class="solo">SOLO</span><img src="img/ga1.jpg" alt="" /></div>
+					</div>
+				</section>
+				</div>
+			</main>
+			<footer>
+				<span>copyrightⓒ 2015 LeeSsangCompany all right reserved.</span>
+				<div class="social">
+				<p style="float:left;line-height:50px">Lessnag:</p>
+				<a href="https://twitter.com/leessangcompany"><img src="img/twitter.png" alt="twitter" /></a>
+				<a href="https://www.facebook.com/leessangcompany/"><img src="img/facebook.png" alt="facebook" /></a>
+				</div>
+			</footer>
+			
+		</div>
+	</body>
+</html>
