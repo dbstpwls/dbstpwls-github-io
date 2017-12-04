@@ -1,6 +1,6 @@
 # 페이지 마크업
 
-#### [두나무 회사 홈페이지](https://www.dunamu.com/home)
+#### [두나무 회사 메인 홈페이지](https://www.dunamu.com/home)
 
 - 반응형
 - 모든 애니매이션 jquery#1.12.4 버전대만 사용
